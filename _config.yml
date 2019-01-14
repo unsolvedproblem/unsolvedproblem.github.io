@@ -17,8 +17,8 @@ title: "Team Unsovled Problem"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   homepage of Team UnsolvedProblem
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://backgom2357.github.io/UnsolvedProblem/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/UnsolvedProblem/" # the subpath of your site, e.g. /blog
+url: "https://backgom2357.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: None
 github_username:  'backgom2357'
 
