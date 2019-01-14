@@ -2,12 +2,10 @@
 layout: default
 title: Staff
 ---
-<h1>Staff</h1>
-
+<h1>Staff(change_1)</h1>
 <ul>
   {% for author in site.authors %}
     <li>
-      change_
       <h2><a href="{{ site.author.url }}">{{ site.author.name }}</a></h2>
       <h3>{{ author.position }}</h3>
       <p>{{ author.content | markdownify }}</p>
