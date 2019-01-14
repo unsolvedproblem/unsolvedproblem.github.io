@@ -1,6 +1,6 @@
 ---
-short_name: ted
-name: Ted Doe
-position: Writer
+short_name: k2h7913
+name: k2h7913
+position: Cheif Editor
 ---
-Ted has been eating fruit since he was baby.
+hi
