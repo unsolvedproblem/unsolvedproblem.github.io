@@ -1,8 +1,8 @@
 - name: Home
   link: /UnsolvedProblem/
 - name: About
-  link: /UnsolvedProblem/UnsolvedProblem/about.html
+  link: /UnsolvedProblem/about.html
 - name: Blog
-  link: /UnsolvedProblem/UnsolvedProblem/blog.html
+  link: /UnsolvedProblem/blog.html
 - name: Staff
-  link: /UnsolvedProblem/UnsolvedProblem/staff.html
+  link: /UnsolvedProblem/staff.html
