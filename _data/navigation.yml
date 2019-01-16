@@ -4,5 +4,9 @@
   link: /UnsolvedProblem/about.html
 - name: Post
   link: /UnsolvedProblem/post.html
-- name: Staff
+- name: Projects
+  link:
+- name: Members
   link: /UnsolvedProblem/staff.html
+- name: Contact
+  link:
