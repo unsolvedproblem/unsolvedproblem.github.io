@@ -1032,24 +1032,7 @@ Home Section style
     font-weight: 700;
     line-height: 6.5rem;
 }
-.home_text h2{
-    font-family: 'Raleway', sans-serif;
-    font-size:2.586rem;
-    font-weight: 700;
-    line-height: 2.59rem;
-}
-.default_home{
-    background: url(../images/background/header_default.jpg) no-repeat bottom center;
-    background-size: cover;
-    position: relative;
-}
-.main_default_home{
-    overflow: hidden;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: relative;
-    z-index: 1;
-}
+
 
 
 /*
