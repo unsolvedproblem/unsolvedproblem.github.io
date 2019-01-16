@@ -2,13 +2,40 @@
 layout: default
 title: Post
 ---
-<h1>Latest Posts</h1>
+<!--Blog Section-->
+<section id="blog" class="blog lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_blog text-center roomy-100">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="head_title text-center">
+                        <h2>POSTS</h2>
+                        <div class="separator_auto"></div>
+                    </div>
+                </div>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+                <!--post-->
+                {% for post in site.posts %}
+                <div class="col-md-4">
+                    <div class="blog_item m-top-20">
+                      <!--image
+                        <div class="blog_item_img">
+                            <img src="assets/images/Blog/1.jpg" alt="" />
+                        </div>
+                      -->
+                        <div class="blog_text roomy-40">
+                            <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                            <p>
+                              {{ post.excerpt }}
+                              <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- End off recent post-->
+
+            </div>
+        </div><!--End off row -->
+    </div><!--End off container -->
+</section><!-- End off Blog section-->
