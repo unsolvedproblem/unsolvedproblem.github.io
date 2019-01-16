@@ -1,14 +1,148 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {% feed_meta %}
-    {% seo %}
-  </head>
-  <body>
-    {% include navigation.html %}
-    {{ content }}
-  </body>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <!--Designerd by: http://bootstrapthemes.co-->
+
+    {% include head.html %}
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+
+                <div class="container">
+                    <!-- Start Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- End Atribute Navigation -->
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand" href="/">
+
+                            <img src="assets/images/logo.png" class="logo logo-display m-top-10" alt="">
+                            <img src="assets/images/logo.jpg" class="logo logo-scrolled" alt="">
+
+                        </a>
+                    </div>
+                    <!-- End Header Navigation -->
+                </div>
+
+
+                <!-- Start Side Menu -->
+                <div class="side">
+                    <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                    <div class="widget">
+                        <h6 class="title">Team UN PR</h6>
+                        <ul class="link">
+                          {% for item in site.data.navigation %}
+                            <li><a href="{{ item.link }}"
+                            {% if page.url == item.link %}
+                            class="current"
+                            {% endif %}>
+                              {{ item.name }}
+                            </a></li>
+                          {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h6 class="title">Additional Links</h6>
+                        <ul class="link">
+                            <li><a href="#">Github {{ site.authors[0].name }}</a></li>
+                            <li><a href="#">Github {{ site.authors[1].name }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Side Menu -->
+
+            </nav>
+
+
+            <!--Home Sections-->
+
+            <section id="hello" class="default_home">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_default_home">
+                            <div class="home_text">
+                                <h2 class="text-white">TEAM UN PR</h2>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+
+            {{ content }}
+
+            <!-- scroll up-->
+            <div class="scrollup">
+                <a href="#"><i class="fa fa-chevron-up"></i></a>
+            </div><!-- End off scroll up -->
+
+
+            <footer id="footer" class="footer bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_footer text-center p-top-40 p-bottom-30">
+                            <p class="wow fadeInRight" data-wow-duration="1s">
+                                All content copyright Team Unsolved Problem © 2019
+                                <br />
+                                Made with
+                                <i class="fa fa-heart"></i>
+                                by
+                                <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a>
+                                2016.
+                                <br />
+                                All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+            <!-- JS includes -->
+
+            <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+            <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+            <script src="assets/js/jquery.magnific-popup.js"></script>
+            <script src="assets/js/jquery.easing.1.3.js"></script>
+            <script src="assets/js/slick.min.js"></script>
+            <script src="assets/js/jquery.collapse.js"></script>
+            <script src="assets/js/bootsnav.js"></script>
+
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
