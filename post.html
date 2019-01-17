@@ -37,9 +37,9 @@ title: Posts
                 <section id="laon">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
-                      <h2>LAON</h2>
+                      <h3>LAON</h3>
                       <div class="separator_auto"></div>
-                        {% for post in site.posts %}
+                        {% for post in site.tags.laon %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">
@@ -47,7 +47,7 @@ title: Posts
                                 </div>
                               -->
                                 <div class="blog_text roomy-40">
-                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <h6><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
                                     <p>
                                       {{ post.excerpt }}
                                       <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
@@ -63,9 +63,9 @@ title: Posts
                 <section id="first-contact">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
-                      <h2>FIRST CONTACT</h2>
+                      <h3>FIRST CONTACT</h3>
                       <div class="separator_auto"></div>
-                        {% for post in site.posts %}
+                        {% for post in site.tags.first-contact %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">
@@ -73,7 +73,7 @@ title: Posts
                                 </div>
                               -->
                                 <div class="blog_text roomy-40">
-                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <h6><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
                                     <p>
                                       {{ post.excerpt }}
                                       <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
@@ -89,9 +89,9 @@ title: Posts
                 <section id="hands-on">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
-                      <h2>HANDS ON</h2>
+                      <h3>HANDS ON</h3>
                       <div class="separator_auto"></div>
-                        {% for post in site.posts %}
+                        {% for post in site.tags.hands-on %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">
@@ -99,7 +99,7 @@ title: Posts
                                 </div>
                               -->
                                 <div class="blog_text roomy-40">
-                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <h6><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
                                     <p>
                                       {{ post.excerpt }}
                                       <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
