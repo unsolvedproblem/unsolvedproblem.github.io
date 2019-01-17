@@ -65,10 +65,19 @@
                 <div class="side">
                     <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                     <div class="widget">
+                        <h6 class="title">Contact</h6>
+                        <ul class="link">
+                            <li>E-mail of {{ site.authors[0].name }} : <br / > <I>{{ site.authors[0].email }}</I></li>
+                            <li>E-mail of {{ site.authors[1].name }} : <br / > <I>{{ site.authors[1].email }}</I></li>
+                        </ul>
+                    </div>
+                    <div class="widget">
                         <h6 class="title">Additional Links</h6>
                         <ul class="link">
-                            <li><a href="#">Github {{ site.authors[0].name }}</a></li>
-                            <li><a href="#">Github {{ site.authors[1].name }}</a></li>
+                            <li><a href="{{ site.authors[0].github_url }}">Github of {{ site.authors[0].name }}</a></li>
+                            <li><a href="{{ site.authors[0].blog_url }}">Blog of {{ site.authors[0].name }}</a></li>
+                            <li><a href="{{ site.authors[1].github_url }}">Github of {{ site.authors[1].name }}</a></li>
+                            <li><a href="{{ site.authors[1].blog_url }}">Blog of {{ site.authors[1].name }}</a></li>
                         </ul>
                     </div>
                 </div>
