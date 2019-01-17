@@ -5,6 +5,10 @@
 - name: Posts
   link: /UnsolvedProblem/posts.html
 - name: Projects
-  link:
+  link: /UnsolvedProblem/projects.html
+- name: Coding Practices
+  link: /UnsolvedProblem/coding_practices.html
+- name: Life
+  link: /UnsolvedProblem/life.html
 - name: Members
   link: /UnsolvedProblem/staff.html
