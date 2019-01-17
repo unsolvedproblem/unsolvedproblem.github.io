@@ -16,17 +16,17 @@ title: Posts
                           <ul>
                             <li>
                               <div class="about_btns m-top-40">
-                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                                    <a href="#laon" class="btn btn-primary">Laon</a>
                               </div>
                             </li>
                             <li>
                               <div class="about_btns m-top-40">
-                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                                    <a href="#first-contact" class="btn btn-primary">First contact</a>
                               </div>
                             </li>
                             <li>
                               <div class="about_btns m-top-40">
-                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                                    <a href="#hands-on" class="btn btn-primary">Hands-on</a>
                               </div>
                             </li>
                           </ul>
@@ -34,24 +34,83 @@ title: Posts
                     </div>
 
                 <!--post-->
+                <section id="laon">
+                  <div class="main_blog text-center roomy-60">
+                    <div class="head_title text-center">
+                      <h2>LAON</h2>
+                      <div class="separator_auto"></div>
+                        {% for post in site.posts %}
+                            <div class="blog_item m-top-20">
+                              <!--image
+                                <div class="blog_item_img">
+                                    <img src="assets/images/Blog/1.jpg" alt="" />
+                                </div>
+                              -->
+                                <div class="blog_text roomy-40">
+                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <p>
+                                      {{ post.excerpt }}
+                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                                    </p>
+                                </div>
+                            </div>
 
-                {% for post in site.posts %}
-
-                    <div class="blog_item m-top-20">
-                      <!--image
-                        <div class="blog_item_img">
-                            <img src="assets/images/Blog/1.jpg" alt="" />
-                        </div>
-                      -->
-                        <div class="blog_text roomy-40">
-                            <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
-                            <p>
-                              {{ post.excerpt }}
-                              <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
-                            </p>
-                        </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                  </div>
+                </section>
+
+                <section id="first-contact">
+                  <div class="main_blog text-center roomy-60">
+                    <div class="head_title text-center">
+                      <h2>FIRST CONTACT</h2>
+                      <div class="separator_auto"></div>
+                        {% for post in site.posts %}
+                            <div class="blog_item m-top-20">
+                              <!--image
+                                <div class="blog_item_img">
+                                    <img src="assets/images/Blog/1.jpg" alt="" />
+                                </div>
+                              -->
+                                <div class="blog_text roomy-40">
+                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <p>
+                                      {{ post.excerpt }}
+                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                                    </p>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                  </div>
+                </section>
+
+                <section id="hands-on">
+                  <div class="main_blog text-center roomy-60">
+                    <div class="head_title text-center">
+                      <h2>HANDS ON</h2>
+                      <div class="separator_auto"></div>
+                        {% for post in site.posts %}
+                            <div class="blog_item m-top-20">
+                              <!--image
+                                <div class="blog_item_img">
+                                    <img src="assets/images/Blog/1.jpg" alt="" />
+                                </div>
+                              -->
+                                <div class="blog_text roomy-40">
+                                    <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
+                                    <p>
+                                      {{ post.excerpt }}
+                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                                    </p>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                  </div>
+                </section>
                 <!-- End off recent post-->
 
             </div>
