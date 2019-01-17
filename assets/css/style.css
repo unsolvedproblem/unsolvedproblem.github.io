@@ -371,6 +371,17 @@ Separator
     background: #139C54;
 }
 
+.separator_color1{
+    background: #56ad79;
+}
+.separator_color2{
+    background: #ff7a9d;
+}
+.separator_color3{
+    background: #ffa3eb;
+}
+
+
 /*
 Button
 */
@@ -421,8 +432,24 @@ Button
 .btn-danger{}
 .btn-link{}
 
-
-
+.btn-color1{
+    color: #fff;
+    background-color: #56ad79;
+    border:1px solid;
+    border-color: #56ad79;
+}
+.btn-color2{
+    color: #fff;
+    background-color: #ff7a9d;
+    border:1px solid;
+    border-color: #ff7a9d;
+}
+.btn-color3{
+    color: #fff;
+    background-color: #ffa3eb;
+    border:1px solid;
+    border-color: #ffa3eb;
+}
 /*
 socail icon
 --------------------------------*/
