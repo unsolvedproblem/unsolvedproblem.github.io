@@ -3,7 +3,7 @@ layout: default
 title: Posts
 ---
 <!--Blog Section-->
-<section id="blog" class="blog lightbg">
+<section id="blog" class="blog">
     <div class="container">
         <div class="row">
             <div class="main_blog text-center roomy-40">
@@ -16,7 +16,7 @@ title: Posts
                           <ul>
                             <li>
                               <div class="about_btns m-top-40">
-                                    <a href="#laon" class="btn btn-primary">Laon</a>
+                                    <a href="#laon" class="btn btn-primary">Laon people</a>
                               </div>
                             </li>
                             <li>
@@ -26,18 +26,22 @@ title: Posts
                             </li>
                             <li>
                               <div class="about_btns m-top-40">
-                                    <a href="#hands-on" class="btn btn-primary">Hands-on</a>
+                                    <a href="#hands-on" class="btn btn-primary">Hands-on ML</a>
                               </div>
                             </li>
                           </ul>
                         </div>
                     </div>
+                  </div>
+              </div><!--End off row -->
+          </div><!--End off container -->
+      </section><!-- End off Blog section-->
 
                 <!--post-->
-                <section id="laon">
+                <section id="laon" class="lightbg">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
-                      <h3>LAON</h3>
+                      <h3>LAON PEOPLE</h3>
                       <div class="separator_auto"></div>
                         {% for post in site.tags.laon %}
                             <div class="blog_item m-top-20">
@@ -47,11 +51,11 @@ title: Posts
                                 </div>
                               -->
                                 <div class="blog_text roomy-40">
-                                    <h6><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
-                                    <p>
-                                      {{ post.excerpt }}
-                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
-                                    </p>
+                                    <a href="{{ post.url | prepend: site.baseurl }}">
+                                      <h5><U>{{ post.title }}</U></h5>
+                                        <p>{{ post.excerpt | strip_html }}</p>
+                                    </a>
+                                    <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
                                 </div>
                             </div>
 
@@ -72,13 +76,13 @@ title: Posts
                                     <img src="assets/images/Blog/1.jpg" alt="" />
                                 </div>
                               -->
-                                <div class="blog_text roomy-40">
-                                    <h6><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
-                                    <p>
-                                      {{ post.excerpt }}
-                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
-                                    </p>
-                                </div>
+                              <div class="blog_text roomy-40">
+                                  <a href="{{ post.url | prepend: site.baseurl }}">
+                                    <h5><U>{{ post.title }}</U></h5>
+                                      <p>{{ post.excerpt | strip_html }}</p>
+                                  </a>
+                                  <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                              </div>
                             </div>
 
                         {% endfor %}
@@ -86,7 +90,7 @@ title: Posts
                   </div>
                 </section>
 
-                <section id="hands-on">
+                <section id="hands-on ML" class="lightbg">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
                       <h3>HANDS ON</h3>
@@ -98,13 +102,13 @@ title: Posts
                                     <img src="assets/images/Blog/1.jpg" alt="" />
                                 </div>
                               -->
-                                <div class="blog_text roomy-40">
-                                    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-                                    <p>
-                                      {{ post.excerpt }}
-                                      <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
-                                    </p>
-                                </div>
+                              <div class="blog_text roomy-40">
+                                  <a href="{{ post.url | prepend: site.baseurl }}">
+                                    <h5><U>{{ post.title }}</U></h5>
+                                      <p>{{ post.excerpt | strip_html }}</p>
+                                  </a>
+                                  <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                              </div>
                             </div>
 
                         {% endfor %}
@@ -112,8 +116,3 @@ title: Posts
                   </div>
                 </section>
                 <!-- End off recent post-->
-
-            </div>
-        </div><!--End off row -->
-    </div><!--End off container -->
-</section><!-- End off Blog section-->
