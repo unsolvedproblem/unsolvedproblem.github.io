@@ -1,0 +1,50 @@
+---
+layout: default
+title: Coding Practices
+---
+<section id="blog" class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="main_blog text-center roomy-40">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="head_title text-center">
+                        <h2>CODING PRACTICES</h2>
+                        <div class="separator_auto"></div>
+                        <p>
+                          <br />
+                          CHECK YOUR CODING SKILLS
+                          <br />
+                          WITH UNSOLVED PROBLEM
+                        </p>
+                    </div>
+                </div>
+            </div><!--End off row -->
+        </div><!--End off container -->
+    </div>
+</section><!-- End off Blog section-->
+
+
+<section id="coding" class="lightbg">
+  <div class="main_blog text-center roomy-30">
+    <div class="head_title text-center">
+        {% for post in site.tags.coding_practice %}
+            <div class="blog_item m-top-20">
+              <!--image
+                <div class="blog_item_img">
+                    <img src="assets/images/Blog/1.jpg" alt="" />
+                </div>
+              -->
+                <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                      <h5><U>{{ post.title }}</U></h5>
+                        <p>
+                          {{ post.excerpt | strip_html | truncatewords: 50 }}
+                        </p>
+                    </a>
+                    <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
