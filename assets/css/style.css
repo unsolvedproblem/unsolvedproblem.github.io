@@ -1681,7 +1681,8 @@ Footer Section style
 =====================*/
 
 .main_footer{
-    overflow: hidden;
+
+    bottom: 0;
 }
 
 .main_footer i {
@@ -1689,7 +1690,10 @@ Footer Section style
     color: #ff0000;
 }
 
-
+.main_footer_position{
+  posision: absolute;
+  overflow: hidden;
+}
 
 /*maps*/
 .main_maps{
