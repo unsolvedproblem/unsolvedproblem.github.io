@@ -3,10 +3,8 @@
 - name: About
   link: /UnsolvedProblem/about.html
 - name: Posts
-  link: /UnsolvedProblem/post.html
+  link: /UnsolvedProblem/posts.html
 - name: Projects
   link:
 - name: Members
   link: /UnsolvedProblem/staff.html
-- name: Contact
-  link:
