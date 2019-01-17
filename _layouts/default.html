@@ -65,19 +65,6 @@
                 <div class="side">
                     <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                     <div class="widget">
-                        <h6 class="title">Team UN PR</h6>
-                        <ul class="link">
-                          {% for item in site.data.navigation %}
-                            <li><a href="{{ item.link }}"
-                            {% if page.url == item.link %}
-                            class="current"
-                            {% endif %}>
-                              {{ item.name }}
-                            </a></li>
-                          {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="widget">
                         <h6 class="title">Additional Links</h6>
                         <ul class="link">
                             <li><a href="#">Github {{ site.authors[0].name }}</a></li>
