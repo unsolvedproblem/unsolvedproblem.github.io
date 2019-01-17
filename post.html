@@ -1,22 +1,42 @@
 ---
 layout: default
-title: Post
+title: Posts
 ---
 <!--Blog Section-->
 <section id="blog" class="blog lightbg">
     <div class="container">
         <div class="row">
-            <div class="main_blog text-center roomy-100">
+            <div class="main_blog text-center roomy-40">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="head_title text-center">
                         <h2>POSTS</h2>
                         <div class="separator_auto"></div>
+
+                        <div class="category">
+                          <ul>
+                            <li>
+                              <div class="about_btns m-top-40">
+                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="about_btns m-top-40">
+                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="about_btns m-top-40">
+                                    <a href="" class="btn btn-primary">MEMBERS</a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                     </div>
-                </div>
 
                 <!--post-->
+
                 {% for post in site.posts %}
-                <div class="col-md-4">
+
                     <div class="blog_item m-top-20">
                       <!--image
                         <div class="blog_item_img">
@@ -31,7 +51,6 @@ title: Post
                             </p>
                         </div>
                     </div>
-                </div>
                 {% endfor %}
                 <!-- End off recent post-->
 

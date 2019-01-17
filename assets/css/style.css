@@ -740,7 +740,7 @@ textarea::-ms-input-placeholder{
 }
 /*heading title all area*/
 .head_title{
-    padding-bottom: 7.143rem;
+    padding-bottom: 2.143rem;
     overflow: hidden;
 }
 .head_title h2{
@@ -1753,4 +1753,18 @@ Footer Section style
     margin-left: -6px;
     text-decoration: none;
 
+}
+
+.category ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+.category li{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border : 0;
+    display: inline-block;
 }
