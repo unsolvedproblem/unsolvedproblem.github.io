@@ -1,14 +1,46 @@
 ---
 layout: default
-title: Staff
+title: Members
 ---
-<h1>Staff(change_0)</h1>
-<ul>
-  {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul>
+<section id="members" class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="main_blog text-center roomy-40">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="head_title text-center">
+                        <h2>MEMBERS</h2>
+                        <div class="separator_auto"></div>
+                        A BRILLIANT VICTORY fell to us. 
+                    </div>
+                </div>
+            </div><!--End off row -->
+        </div><!--End off container -->
+    </div>
+</section><!-- End off Blog section-->
+
+<!--authors-->
+<section id="authors" class="lightbg">
+  <div class="main_blog text-center roomy-40">
+    <div class="head_title text-center">
+      <ul>
+        {% for author in site.authors %}
+            <div class="blog_item m-top-20">
+              <!--image
+                <div class="blog_item_img">
+                    <img src="assets/images/Blog/1.jpg" alt="" />
+                </div>
+                -->
+                <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
+                  <li>
+                    <h2><a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a></h2>
+                    <h3>{{ author.position }}</h3>
+                    <p>{{ author.content | markdownify }}</p>
+                  </li>
+                </div>
+            </div>
+
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
