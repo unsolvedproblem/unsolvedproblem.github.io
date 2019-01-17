@@ -1,15 +1,38 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<h2>{{ page.position }}</h2>
 
-{{ content }}
+<section id="{{ page.name }}" class="about roomy-100">
+    <div class="container">
+        <div class="row">
+            <div class="main_about">
+                <div class="col-md-6">
+                    <div class="about_content">
+                        <h1><B>{{ page.name }}</B></h1>
+                        <div class="separator_left"></div>
+                        <h3>{{ page.position }}</h3>
+                        <h5>E-MAIL      :   {{ page.email }}</h5>
+                        <h5>GITHUB URL  :   {{ page.github_url }} </h5>
+                        <h5>BLOG URL : {{ page.blog_url }}</h5>
 
-<h2>Posts</h2>
-<ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+                        <p>
+                          {{ content }}
+                        </p>
+
+                        <div class="separator_left"></div>
+
+                        <h3>Posts</h3>
+                        <ul>
+                          {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+                          {% for post in filtered_posts %}
+                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div><!--End off row-->
+    </div><!--End off container -->
+</section> <!--End off About section -->
