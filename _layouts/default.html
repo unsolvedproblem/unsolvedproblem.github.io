@@ -41,15 +41,23 @@
 
                     <!-- Start Header Navigation -->
                     <div class="navbar-header">
-
-                        <a class="navbar-brand" href="/">
-
-                            <img src="assets/images/logo.png" class="logo logo-display m-top-10" alt="">
-                            <img src="assets/images/logo.jpg" class="logo logo-scrolled" alt="">
-
-                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
                     </div>
                     <!-- End Header Navigation -->
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                          {% for item in site.data.navigation %}
+                            <li><a href="{{ item.link }}"{% if page.url == item.link %}class="current"{% endif %}>
+                              {{ item.name }}
+                            </a></li>
+                          {% endfor %}
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+
                 </div>
 
 
@@ -90,7 +98,7 @@
                     <div class="row">
                         <div class="main_default_home">
                             <div class="home_text">
-                                <h2 class="text-white">TEAM UN PR</h2>
+                                <h2 class="text-white">TEAM <br /> UN PR</h2>
                             </div>
                         </div>
                     </div><!--End off row-->
