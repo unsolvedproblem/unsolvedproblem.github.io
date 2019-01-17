@@ -64,19 +64,6 @@
                 <div class="side">
                     <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                     <div class="widget">
-                        <h6 class="title">Team UN PR</h6>
-                        <ul class="link">
-                          {% for item in site.data.navigation %}
-                            <li><a href="{{ item.link }}"
-                            {% if page.url == item.link %}
-                            class="current"
-                            {% endif %}>
-                              {{ item.name }}
-                            </a></li>
-                          {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="widget">
                         <h6 class="title">Additional Links</h6>
                         <ul class="link">
                             <li><a href="#">Github {{ site.authors[0].name }}</a></li>
@@ -146,13 +133,12 @@
             <section id="blog" class="blog lightbg">
                 <div class="container">
                     <div class="row">
-                        <div class="main_blog text-center roomy-100">
+                        <div class="main_blog text-center roomy-40">
                             <div class="col-sm-8 col-sm-offset-2">
                                 <div class="head_title text-center">
                                     <h2>RECENT POSTS</h2>
                                     <div class="separator_auto"></div>
-                                    <a href="blog"> MORE POSTS </a>
-                                </div>
+                                  </div>
                             </div>
 
                             <!--recent post-->
@@ -164,10 +150,10 @@
                                     </div>
                                   -->
                                     <div class="blog_text roomy-40">
-                                        <h6><a href="{{ site.posts[-1].url }}">{{ site.posts[-1].title }}</a></h6>
+                                        <h6><a href="{{ site.posts[-1].url | prepend: site.baseurl }}">{{ site.posts[0].title }}</a></h6>
                                         <p>
-                                          {{ site.posts[-1].excerpt }}
-                                          <em> {{ site.posts[-1].date | date_to_string }} / {{ site.posts[-1].author }} </em>
+                                          {{ site.posts[0].excerpt }}
+                                          <em> {{ site.posts[0].date | date_to_string }} / {{ site.posts[0].author }} </em>
                                         </p>
                                     </div>
                                 </div>
@@ -181,10 +167,10 @@
                                     </div>
                                   -->
                                     <div class="blog_text roomy-40">
-                                        <h6><a href="{{ site.posts[-2].url }}">{{ site.posts[-2].title }}</a></h6>
+                                        <h6><a href="{{ site.posts[-2].url | prepend: site.baseurl }}">{{ site.posts[1].title }}</a></h6>
                                         <p>
-                                          {{ site.posts[-2].excerpt }}
-                                          <em> {{ site.posts[-2].date | date_to_string }} / {{ site.posts[-2].author }} </em>
+                                          {{ site.posts[1].excerpt }}
+                                          <em> {{ site.posts[1].date | date_to_string }} / {{ site.posts[1].author }} </em>
                                         </p>
                                     </div>
                                 </div>
@@ -198,10 +184,10 @@
                                     </div>
                                   -->
                                     <div class="blog_text roomy-40">
-                                        <h6><a href="{{ site.posts[-3].url }}">{{ site.posts[-3].title }}</a></h6>
+                                        <h6><a href="{{ site.posts[-3].url | prepend: site.baseurl }}">{{ site.posts[2].title }}</a></h6>
                                         <p>
-                                          {{ site.posts[-3].excerpt }}
-                                          <em> {{ site.posts[-3].date | date_to_string }} / {{ site.posts[-3].author }} </em>
+                                          {{ site.posts[2].excerpt }}
+                                          <em> {{ site.posts[2].date | date_to_string }} / {{ site.posts[2].author }} </em>
                                         </p>
                                     </div>
                                 </div>
