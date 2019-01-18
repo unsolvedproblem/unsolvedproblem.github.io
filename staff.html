@@ -10,7 +10,7 @@ title: Members
                     <div class="head_title text-center">
                         <h2>MEMBERS</h2>
                         <div class="separator_auto"></div>
-                        A BRILLIANT VICTORY fell to us. 
+                        A BRILLIANT VICTORY fell to us.
                     </div>
                 </div>
             </div><!--End off row -->
@@ -32,7 +32,11 @@ title: Members
                 -->
                 <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
                   <li>
-                    <h2><a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a></h2>
+                    <div class="impress_btns m-top-30">
+                        <a href="{{ author.url | prepend: site.baseurl }}" class="btn btn-primary m-top-20">
+                          <h2 style="color:#fff"> {{ author.name }} </h2>
+                        </a>
+                    </div>
                     <h3>{{ author.position }}</h3>
                     <p>{{ author.content | markdownify }}</p>
                   </li>
