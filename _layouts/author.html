@@ -6,7 +6,7 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="main_about">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="about_content">
                         <h1><B>{{ page.name }}</B></h1>
                         <div class="separator_left"></div>
@@ -16,7 +16,7 @@ layout: default
                         <h5>BLOG URL : {{ page.blog_url }}</h5>
 
                         <p>
-                          {{ content }}
+                          {{ content | markdownify }}
                         </p>
 
                         <div class="separator_left"></div>
