@@ -23,7 +23,7 @@ layout: default
 
                         <h3>Posts</h3>
                         <ul>
-                          {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+                          {% assign filtered_posts = site.posts | where: 'author', page.name %}
                           {% for post in filtered_posts %}
                             <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
                           {% endfor %}
