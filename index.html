@@ -1,15 +1,127 @@
 ---
-layout: home
-title: Unsolved Problem
+layout: default
+title: Unsovled Problem
 ---
+<!--About Sections-->
+<section id="about" class="about roomy-100">
+    <div class="container">
+        <div class="row">
+            <div class="main_about">
+                <div class="col-md-6">
+                    <div class="about_content">
+                        <h2>ABOUT US</h2>
+                        <div class="separator_left"></div>
 
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  </head>
-  <body>
-  </body>
-</html>
+                        <p> Team Unsolved Problem : Machine Learing Research Team and Data Science Team </p>
+
+                        <div class="about_btns m-top-40">
+                            <a href="staff" class="btn btn-primary">MEMBERS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about_accordion wow fadeIn">
+                        <div id="faq_main_content" class="faq_main_content">
+                            {% for author in site.authors %}
+                            <h6><i class="fa fa-angle-right"></i> {{ author.name }} </h6>
+                            <div>
+                                <div class="content">
+                                  <h6> {{ author.position }} </h6>
+                                  <p> {{ author.content | markdownify }} </p>
+                                </div>
+                            </div> <!-- End off accordion item-1 -->
+                            {% endfor %}
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--End off row-->
+    </div><!--End off container -->
+</section> <!--End off About section -->
+
+<!--Blog Section-->
+<section id="blog" class="blog lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_blog text-center roomy-40">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="head_title text-center">
+                        <h2>RECENT POSTS</h2>
+                        <div class="separator_auto"></div>
+                      </div>
+                </div>
+
+                <!--recent post-->
+                <div class="col-md-4">
+                    <div class="blog_item m-top-20">
+                      <!--image
+                        <div class="blog_item_img">
+                            <img src="assets/images/Blog/1.jpg" alt="" />
+                        </div>
+                      -->
+                        <div class="blog_text roomy-40 bg-white">
+                            <h6><a href="{{ site.posts[0].url | prepend: site.baseurl }}">{{ site.posts[0].title }}</a></h6>
+                            <p>
+                              {{ site.posts[0].excerpt }}
+                              <em> {{ site.posts[0].date | date_to_string }} / {{ site.posts[0].author }} </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog_item m-top-20">
+                      <!--image
+                        <div class="blog_item_img">
+                            <img src="assets/images/Blog/1.jpg" alt="" />
+                        </div>
+                      -->
+                        <div class="blog_text roomy-40 bg-white">
+                            <h6><a href="{{ site.posts[1].url | prepend: site.baseurl }}">{{ site.posts[1].title }}</a></h6>
+                            <p>
+                              {{ site.posts[1].excerpt }}
+                              <em> {{ site.posts[1].date | date_to_string }} / {{ site.posts[1].author }} </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog_item m-top-20">
+                      <!--image
+                        <div class="blog_item_img">
+                            <img src="assets/images/Blog/1.jpg" alt="" />
+                        </div>
+                      -->
+                        <div class="blog_text roomy-40 bg-white">
+                            <h6><a href="{{ site.posts[2].url | prepend: site.baseurl }}">{{ site.posts[2].title }}</a></h6>
+                            <p>
+                              {{ site.posts[2].excerpt }}
+                              <em> {{ site.posts[2].date | date_to_string }} / {{ site.posts[2].author }} </em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End off recent post-->
+
+            </div>
+        </div><!--End off row -->
+    </div><!--End off container -->
+</section><!-- End off Blog section-->
+
+<!--Projects Section-->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="main_portfolio roomy-100">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="head_title text-center">
+                        <h2>OUR PROJECTS</h2>
+                        <div class="separator_auto"></div>
+                        <p> There is no project yet </p>
+                    </div>
+                </div>
+            </div>
+        </div> <!--End off row-->
+    </div> <!--End off container-->
+</section> <!--End off Portfolio section-->

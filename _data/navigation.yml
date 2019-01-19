@@ -1,14 +1,14 @@
 - name: Home
-  link: /UnsolvedProblem/
+  link: /
 - name: About
-  link: /UnsolvedProblem/about.html
+  link: /about.html
 - name: Posts
-  link: /UnsolvedProblem/posts.html
+  link: /posts.html
 - name: Projects
-  link: /UnsolvedProblem/projects.html
+  link: /projects.html
 - name: Coding Practices
-  link: /UnsolvedProblem/coding_practices.html
+  link: /coding_practices.html
 - name: Life
-  link: /UnsolvedProblem/life.html
+  link: /life.html
 - name: Members
-  link: /UnsolvedProblem/staff.html
+  link: /staff.html
