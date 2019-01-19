@@ -7,7 +7,7 @@ github_url: "https://github.com/backgom2357"
 blog_url:
 ---
 ### Polar B
-![avatar2](https://avatars2.githubusercontent.com/u/30210944?s=400&v=4){: width="360" height="480"}
+![avatar2](https://avatars2.githubusercontent.com/u/30210944?s=400&v=4){: width="360" height="360"}
 
 sy0277@naver.com <br>
 backgom2357@gmail.com
