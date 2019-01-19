@@ -97,7 +97,18 @@ section { overflow: hidden; }*/
     padding-top: 40px;
     padding-bottom: 40px;
 }
-
+.roomy-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.roomy-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.roomy-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 /*text color*/
 
@@ -767,7 +778,6 @@ textarea::-ms-input-placeholder{
 }
 /*heading title all area*/
 .head_title{
-    padding-bottom: 2.143rem;
     overflow: hidden;
 }
 .head_title h2{
