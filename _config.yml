@@ -42,7 +42,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-google_analytics_id: UA-132747823-1
+google_analytics_id: UA-132747823-2
 
 collections:
   authors:
