@@ -24,3 +24,5 @@ def miniMaxSum(arr):
 ~~~
 
 궁금하신게 있다면 메일 주세요.
+k2h7913@daum.net  
+cafehero123@gmail.com
