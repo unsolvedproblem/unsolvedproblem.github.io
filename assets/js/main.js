@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
           '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
 
-  patterns: {
+  prerns: {
     youtube: {
       index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
 
@@ -77,7 +77,7 @@ jQuery(document).ready(function ($) {
 
   srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
 }
- 
+
     });
 
 
@@ -130,7 +130,7 @@ jQuery(document).ready(function ($) {
 
 
 //---------------------------------------------
-// Counter 
+// Counter
 //---------------------------------------------
 
     $('.statistic-counter').counterUp({
@@ -139,7 +139,7 @@ jQuery(document).ready(function ($) {
     });
 
 //---------------------------------------------
-// Scroll Up 
+// Scroll Up
 //---------------------------------------------
 
     $(window).scroll(function () {
@@ -158,7 +158,7 @@ jQuery(document).ready(function ($) {
 
 
 
-//About us accordion 
+//About us accordion
 
     $("#faq_main_content").collapse({
         accordion: true,
@@ -186,24 +186,6 @@ jQuery(document).ready(function ($) {
 
 
 
-
-
-  
-
     //End
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
