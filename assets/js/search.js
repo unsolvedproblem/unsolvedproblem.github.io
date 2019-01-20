@@ -12,7 +12,7 @@
 
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = '<div class="blog_text roomy-20 col-sm-6 col-sm-offset-3"><h2>No Result Found</h2></div>'';
     }
   }
 
