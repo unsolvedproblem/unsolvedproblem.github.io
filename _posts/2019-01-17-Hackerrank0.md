@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기1"
+title:  "Hackerank 레벨업 하기1 [Simple Array Sum]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice

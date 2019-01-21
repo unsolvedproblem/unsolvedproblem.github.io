@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기22"
+title:  "Hackerank 레벨업 하기22 [Counting Valleys]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice

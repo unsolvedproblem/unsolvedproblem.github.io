@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기24"
+title:  "Hackerank 레벨업 하기24 [Cats and a Mouse]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice

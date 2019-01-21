@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기18"
+title:  "Hackerank 레벨업 하기18 [Day of the Programmer]"
 date:   2019-01-19
 category: code_practice
 tags: coding_practice

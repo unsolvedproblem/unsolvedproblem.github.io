@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기5"
+title:  "Hackerank 레벨업 하기5 [Plus Minus]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice

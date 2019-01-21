@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기25"
+title:  "Hackerank 레벨업 하기25 [Forming a Magic Square]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice

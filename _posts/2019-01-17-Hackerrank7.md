@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기8"
+title:  "Hackerank 레벨업 하기8 [Birthday Cake Candles]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice
