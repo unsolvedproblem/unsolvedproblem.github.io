@@ -9,7 +9,7 @@ comments: true
 ---
 
 Hackerrank 레벨업하기  
-문제  
+문제   
 [Forming a Magic Square](https://www.hackerrank.com/challenges/magic-square-forming/problem)
 
 ~~~

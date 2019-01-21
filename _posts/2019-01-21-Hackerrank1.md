@@ -9,7 +9,7 @@ comments: true
 ---
 
 Hackerrank 레벨업하기  
-문제  
+문제     
 [Picking Numbers](https://www.hackerrank.com/challenges/picking-numbers/problem)
 
 ~~~
