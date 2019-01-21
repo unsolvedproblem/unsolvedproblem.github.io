@@ -1592,6 +1592,9 @@ pre code {
   .container {
     width: 750px;
   }
+  .search-form {
+    display: none;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -1603,6 +1606,12 @@ pre code {
     width: 1170px;
   }
 }
+@media (max-width: 768px) {
+  .fa-search {
+    display: none;
+  }
+}
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -6584,7 +6593,7 @@ button.close {
   td.visible-xs {
     display: table-cell !important;
   }
-  
+
 }
 @media (max-width: 767px) {
   .visible-xs-block {
