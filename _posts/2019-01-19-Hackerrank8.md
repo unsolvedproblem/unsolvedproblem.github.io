@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기19"
+title:  "Hackerrank 레벨업 하기19 [Bon Appetit]"
 date:   2019-01-19
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
+comments: true
 ---
 
 Hackerrank 레벨업하기  

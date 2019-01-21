@@ -5,6 +5,7 @@ date:   2019-01-18 06:58:23 +0900
 category: laon
 tags: laon
 author: backgom2357
+comments: true
 ---
 post sample 입니당!
 

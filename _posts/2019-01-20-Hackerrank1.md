@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기22"
+title:  "Hackerrank 레벨업 하기22 [Counting Valleys]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
+comments: true
 ---
 
 Hackerrank 레벨업하기  

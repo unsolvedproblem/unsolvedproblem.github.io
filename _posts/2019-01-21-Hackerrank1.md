@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기26"
+title:  "Hackerrank 레벨업 하기26 [Picking Numbers]"
 date:   2019-01-21
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
+comments: true
 ---
 
 Hackerrank 레벨업하기  
-문제  
+문제     
 [Picking Numbers](https://www.hackerrank.com/challenges/picking-numbers/problem)
 
 ~~~
