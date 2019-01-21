@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hackerank 레벨업 하기26"
-date:   2019-01-20
+date:   2019-01-21
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
