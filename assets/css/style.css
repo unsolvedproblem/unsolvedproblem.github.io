@@ -367,19 +367,19 @@ Separator
     width:85px;
     height:2px;
     margin:20px 0px;
-    background: #139C54;
+    background: #67a6db;
 }
 .separator_auto{
     width:85px;
     height:2px;
     margin:20px auto;
-    background: #139C54;
+    background: #67a6db;
 }
 .separator_small{
     width:30px;
     height:2px;
     margin:20px 0px;
-    background: #139C54;
+    background: #67a6db;
 }
 
 .separator_color1{
@@ -420,21 +420,21 @@ Button
     border-radius: 0;
 }
 .btn-default:hover{
-    border-color:#139C54;
-    background-color: #139C54;
+    border-color:#67a6db;
+    background-color: #67a6db;
 }
 
 .btn-primary{
     color: #fff;
-    background-color: #139C54;
+    background-color: #67a6db;
     border:1px solid;
-    border-color: #139C54;
+    border-color: #67a6db;
     padding: 1rem 2rem;
 }
 .btn-primary:hover{
     background-color: #eee;
     border-color: #eee;
-    color:#139C54;
+    color: #67a6db;
 }
 
 .btn-success{}
