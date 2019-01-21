@@ -10,7 +10,6 @@ comments: true
 
 Hackerrank 레벨업하기  
 문제  
-실험   
 [The Hurdle Race](https://www.hackerrank.com/challenges/the-hurdle-race/problem)
 
 ~~~
