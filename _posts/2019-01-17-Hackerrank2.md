@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기3 [A Very Big Sum]"
+title:  "Hackerrank 레벨업 하기3 [A Very Big Sum]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice

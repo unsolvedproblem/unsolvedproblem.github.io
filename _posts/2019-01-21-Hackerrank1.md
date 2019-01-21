@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기26 [Picking Numbers]"
+title:  "Hackerrank 레벨업 하기26 [Picking Numbers]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice

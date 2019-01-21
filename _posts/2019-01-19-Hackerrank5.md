@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기16 [Divisible Sum Pairs]"
+title:  "Hackerrank 레벨업 하기16 [Divisible Sum Pairs]"
 date:   2019-01-19
 category: code_practice
 tags: coding_practice

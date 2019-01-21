@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기6 [Staircase]"
+title:  "Hackerrank 레벨업 하기6 [Staircase]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice

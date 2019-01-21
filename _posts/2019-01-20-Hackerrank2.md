@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기23 [Electronics Shop]"
+title:  "Hackerrank 레벨업 하기23 [Electronics Shop]"
 date:   2019-01-20
 category: code_practice
 tags: coding_practice

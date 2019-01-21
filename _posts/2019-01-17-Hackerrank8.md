@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기9 [Time Conversion]"
+title:  "Hackerrank 레벨업 하기9 [Time Conversion]"
 date:   2019-01-18
 category: code_practice
 tags: coding_practice

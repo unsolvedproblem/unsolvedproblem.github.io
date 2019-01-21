@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerank 레벨업 하기14 [Breaking the Records]"
+title:  "Hackerrank 레벨업 하기14 [Breaking the Records]"
 date:   2019-01-19
 category: code_practice
 tags: coding_practice
