@@ -2,7 +2,7 @@
 layout: post
 title:  "[쉽게읽는 머신러닝-라온피플] 1. 머신러닝 framework"
 date:   2019-01-22
-category: machine learning
+category: laon
 tags: laon
 author: Polar B, 백승열
 comments: true
@@ -24,7 +24,7 @@ comments: true
 #### 인간의 두뇌<br>
 사람들은 컴퓨터를 어떻게 학습시킬지 생각하다가 사람의 학습방법을 모방하기로 합니다. 여기서는 미시적 수준 (즉, 세포 수준)에서 학습에 관여하는 각 세포들의 역할을 알아보겠습니다.
 
-![인간의 두뇌](/assets/images/Laon/week1-1-1.png){: .image-center}<br>
+![인간의 두뇌](/assets/images/Laon/week1-1-1.png){: width="70%" height="auto" .image-center}<br>
  - 세포체(Soma) : <br>
  세포로 들어온 신호의 수준을 판단하여 일정 수준 이하의 신호는 무시하고 일정 수준을 넘게 되면 받은 신호에 응답하여 다음 세포로 신호를 전송합니다. 즉, 세포체는 활성함수(activation function)기능을 담당하는 것이죠.
 
@@ -39,9 +39,9 @@ comments: true
  _(0이면 전달되는 모든 신호가 무시되고, 그 값이 1쪽으로 갈수록 신호의 손실이 없이 그대로 전달이 되며, 학습을 하게되면 이 시냅스의 세기가 바뀌게 됩니다.<br>
  각 세포로 연결되는 수많은 시냅스의 세기(weight)가 학습의도에 따라 변하게 되는 것이죠.)_
 
- #### 틀린그림찾기
- 그림에서 틀린 부분을 한번 찾아 볼까요?!<br>
-![틀린그림찾기](/assets/images/Laon/week1-1-2.png){: .image-center}<br>
+#### 틀린그림찾기<br>
+그림에서 틀린 부분을 한번 찾아 볼까요?!<br>
+![틀린그림찾기](/assets/images/Laon/week1-1-2.png){: width="70%" height="auto" .image-center}<br>
 ~~정답은 5개입니다~~
 
 왜 갑자기 틀린그림찾기를 했을까요?<br>
@@ -64,19 +64,19 @@ comments: true
 | Axon | Output |
 | Synapse | Weight |
 #### 인공 신경망 구조, 퍼셉트론(Perceptron)
-![인공신경망](/assets/images/Laon/week1-1-3.png){: .image-center }<br>
+![인공신경망](/assets/images/Laon/week1-1-3.png){: width="70%" height="auto" .image-center}<br>
 - 특정 threshold 이상이면 반응하고, 그 이하는 무시되는 기능을 활성함수(activation function)이라고 합니다.
 - 선형적인 성질 > 선형적으로 구별이 가능(linearly separable) > 분류에서 유용
 - 하지만 이는 XOR문제를 풀 수 없습니다. <br>
 
-![and,or,not and xor](/assets/images/Laon/week1-1-4.png){: .image-center }<br>
+![and,or,not and xor](/assets/images/Laon/week1-1-4.png){: width="70%" height="auto" .image-center}<br>
 그림에서 처럼 XOR 문제는 선형적으로 구분하기 어렵습니다.<br>
 _(하지만 single layer가 아니라 multi-layer를 이용하면 구현할 수 있습니다)_
 
 ## 5. 활성 함수 (Activation Function)
 
 활성 함수에는 다양한 종류가 있습니다.<br>
-![활성함수](/assets/images/Laon/week1-1-5.png){: .image-center }<br>
+![활성함수](/assets/images/Laon/week1-1-5.png){: width="70%" height="auto" .image-center}<br>
 
 'Sign Fuction'이나 'Step Function'은 단지 두개의 값만 가능하기 때문에 표현의 한계가 있습니다.
 
@@ -86,13 +86,13 @@ _(하지만 single layer가 아니라 multi-layer를 이용하면 구현할 수 
 
 하지만 'Sigmoid Function'을 사용한다 해도 망이 깁어지는 Deep Neural Network에서는 학습의 어려움으로 인해 ReLU(Rectifier Linear Unit)을 주로 사용합니다.
 #### Rectifier Linear Unit (ReLU)
-![ReLU](/assets/images/Laon/week1-1-6.png){: .image-center}<br>
+![ReLU](/assets/images/Laon/week1-1-6.png){: width="70%" height="auto" .image-center}<br>
 
 ## 5. 머신 러닝의 framework
 
 #### 머신 러닝과 일반적인 프로그래밍의 차이
 
-![머신러닝과의 차이](/assets/images/Laon/week1-1-7.png){: .image-center}<br>
+![머신러닝과의 차이](/assets/images/Laon/week1-1-7.png){: width="70%" height="auto" .image-center}<br>
 
 일반적인 프로그래밍은 데이터와 프로그램을 주면 함수를 도출해내지만, 머신러닝은 데이터와 결과값을 주면 프로그램을 도출합니다.
 
@@ -104,10 +104,10 @@ _(하지만 single layer가 아니라 multi-layer를 이용하면 구현할 수 
 
 #### 머신 러닝의 과정
 - 학습(Training)<br>
-![Training](/assets/images/Laon/week1-1-8.png){: .image-center}<br>
+![Training](/assets/images/Laon/week1-1-8.png){: width="70%" height="auto" .image-center}<br>
 
 - 검사(Testing)<br>
-![Testing](/assets/images/Laon/week1-1-9.png){: .image-center}<br>
+![Testing](/assets/images/Laon/week1-1-9.png){: width="70%" height="auto" .image-center}<br>
 
 - 검증(Validation)<br>
 검증단계에선 학습과 다른 데이터를 이용해 학습이 제대로 되었는지를 확인합니다.
