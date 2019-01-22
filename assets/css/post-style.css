@@ -68,6 +68,10 @@ p:last-child {
   display: block;
   margin: auto;
 }
+#post-content {
+  font-size: 130%;
+  line-height: 150%;
+}
 
 /*Preloader css*/
 
