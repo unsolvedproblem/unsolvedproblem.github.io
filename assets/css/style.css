@@ -1809,3 +1809,8 @@ Footer Section style
     border : 0;
     display: inline-block;
 }
+
+.image-center {
+  display: block;
+  margin: auto;
+}
