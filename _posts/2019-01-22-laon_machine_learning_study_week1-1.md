@@ -75,7 +75,7 @@ _(하지만 single layer가 아니라 multi-layer를 이용하면 구현할 수 
 
 ## 5. 활성 함수 (Activation Function)
 
-활성 함수에는 다양한 종류가 있습니다.
+활성 함수에는 다양한 종류가 있습니다.<br>
 ![활성함수](/assets/images/Laon/week1-1-5.png){: .image-center }<br>
 
 'Sign Fuction'이나 'Step Function'은 단지 두개의 값만 가능하기 때문에 표현의 한계가 있습니다.
