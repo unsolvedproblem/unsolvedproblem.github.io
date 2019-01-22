@@ -65,7 +65,7 @@ title: Unsovled Problem
                         <div class="blog_text roomy-40 bg-white">
                             <h6><a href="{{ site.posts[0].url | prepend: site.baseurl }}">{{ site.posts[0].title }}</a></h6>
                             <p>
-                              {{ site.posts[0].excerpt }}
+                              {{ site.posts[0].excerpt | strip_html | truncatewords: 50}}
                               <em> {{ site.posts[0].date | date_to_string }} / {{ site.posts[0].author }} </em>
                             </p>
                         </div>
@@ -82,7 +82,7 @@ title: Unsovled Problem
                         <div class="blog_text roomy-40 bg-white">
                             <h6><a href="{{ site.posts[1].url | prepend: site.baseurl }}">{{ site.posts[1].title }}</a></h6>
                             <p>
-                              {{ site.posts[1].excerpt }}
+                              {{ site.posts[1].excerpt | strip_html | truncatewords: 50 }}
                               <em> {{ site.posts[1].date | date_to_string }} / {{ site.posts[1].author }} </em>
                             </p>
                         </div>
@@ -99,7 +99,7 @@ title: Unsovled Problem
                         <div class="blog_text roomy-40 bg-white">
                             <h6><a href="{{ site.posts[2].url | prepend: site.baseurl }}">{{ site.posts[2].title }}</a></h6>
                             <p>
-                              {{ site.posts[2].excerpt }}
+                              {{ site.posts[2].excerpt | strip_html | truncatewords: 50 }}
                               <em> {{ site.posts[2].date | date_to_string }} / {{ site.posts[2].author }} </em>
                             </p>
                         </div>
