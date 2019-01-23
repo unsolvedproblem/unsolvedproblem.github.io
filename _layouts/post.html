@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post_default
 ---
 
 {% include home_default.html %}
 
+<<<<<<< HEAD
 <body itemscope itemtype="http://schema.org/Article">
 
   <section id="{{ page.title }}" class="roomy-100">
@@ -57,3 +58,64 @@ layout: default
   </section> <!--End off About section -->
 
 </body>
+=======
+<section id="{{ page.title }}" class="roomy-100">
+    <div class="container">
+        <div class="row">
+            <div class="main_about">
+                <div class="col-md-8 col-sm-offset-2">
+                    <div class="about_content">
+                        <h2>{{ page.title }}</h2>
+                        <div class="separator_left"></div>
+
+                        <p>
+                          <I>{{ page.date | date_to_string }}</I>
+                          {% assign author = site.authors | where: 'name', page.author | first %}
+                          {% if author %}
+                            - <I> <a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a> </I>
+                          {% endif %}
+                        </p>
+
+                        <div id="post-content">
+                          <p>
+                            {{ content }}
+                          </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!--End off row-->
+    </div><!--End off container -->
+</section> <!--End off About section -->
+
+<section id="comments" class="roomy-40 lightbg">
+  <div class="container">
+    <div class="col-md-8 col-sm-offset-2">
+      {% if page.comments %} <!-- comments function -->
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://unsolvedproblem.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      {% endif %} <!-- End off comments function -->
+    </div>
+  </div>
+</section>
+>>>>>>> c07cbbcd41ae1511377ece2b02ef71d4e4547cc4

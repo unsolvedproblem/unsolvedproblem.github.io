@@ -55,7 +55,7 @@ title: Posts
                                 <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
                                     <a href="{{ post.url | prepend: site.baseurl }}">
                                       <h5><U>{{ post.title }}</U></h5>
-                                        <p>{{ post.excerpt | strip_html }}</p>
+                                        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
                                     </a>
                                     <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
                                 </div>
@@ -107,7 +107,7 @@ title: Posts
                               <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
                                   <a href="{{ post.url | prepend: site.baseurl }}">
                                     <h5><U>{{ post.title }}</U></h5>
-                                      <p>{{ post.excerpt | strip_html }}</p>
+                                      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
                                   </a>
                                   <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
                               </div>
