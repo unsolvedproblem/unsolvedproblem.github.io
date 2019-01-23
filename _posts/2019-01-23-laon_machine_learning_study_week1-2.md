@@ -10,7 +10,7 @@ comments: true
 <br><br>
 지난 포스트에는 머신러닝의 framework에 대해서 알아보았습니다.
 <br>
-[[쉽게읽는 머신러닝-라온피플] 1. 머신러닝 framework]()
+[[쉽게읽는 머신러닝-라온피플] 1. 머신러닝 framework](/laon/2019/01/22/laon_machine_learning_study_week1-1.html)
 <br>
 오늘은 머신러닝의 학습방법과 몇가지 종류의 머신러닝 모델(Boosting and Bagging)에 대해서 알아보겠습니다!
 <br><br><br>
