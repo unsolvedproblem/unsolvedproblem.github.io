@@ -42,7 +42,7 @@ comments: true
   - 특정 가이드가 없기 때문에 기대했던 것과 다른 결과가 나올 수도 있습니다.
 <br><br>
 
-- 강화 학습(Reinforcement Learning)
+- 강화 학습(Reinforcement Learning) :
 <br><br>
   - 훈련을 잘 따르면 '상(reward)'을 주고, 그렇지 못하면 '벌(punishment)'을 주며, 상과 벌을 통해 훈련의 감독관이 원하는 방향으로 학습을 하게 됩니다.
 <br><br>
