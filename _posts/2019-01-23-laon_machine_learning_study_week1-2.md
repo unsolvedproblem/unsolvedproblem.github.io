@@ -52,7 +52,7 @@ comments: true
 ## 2. Boosting
 <br>
 
-무작위로 선택하는 것보다 약간 가능성이 높은 규칙(weak learner/classifier)들을 결합시켜 보다 정확한 예측 모델을 만들어 내는 것입니다.
+무작위로 선택하는 것보다 약간 가능성이 높은 규칙(weak learner)들을 결합시켜 보다 정확한 예측 모델을 만들어 내는 것입니다.
 <br><br>
 _(Weak learner : 무작위로 선정하는 것보다는 성공 확률이 높은, 즉 오차율이 50% 이하인 학습 규칙)_
 <br><br>
@@ -60,28 +60,28 @@ _(Weak learner : 무작위로 선정하는 것보다는 성공 확률이 높은,
 #### Boosting 학습 방법
 <br>
 
-  - Weak learner를 선정하는 방법은 머신 러닝 알고리즘을 적용하여 서로 다른 분포(distribution)을 갖도록 해주는 것입니다.
+Weak learner를 선정하는 방법은 머신 러닝 알고리즘을 적용하여 서로 다른 분포(distribution)을 갖도록 해주는 것입니다.
 <br><br>
-  - 매번 기본 러닝 알고리즘을 적용할 때 마다 새로운 Weak learner를 만들며, 이 과정을 반복적으로 수행합니다.
+매번 기본 러닝 알고리즘을 적용할 때 마다 새로운 Weak learner를 만들며, 이 과정을 반복적으로 수행합니다.
 <br><br>
-  - 이 Weak learners를 하나로 모아서 Strong learner를 만듭니다.
+이 Weak learners를 하나로 모아서 Strong learner를 만듭니다.
 <br><br>
 
 ![Boosting1](/assets/images/Laon/week1-2-2.png){: width="70%" height="auto" .image-center}
 <br><br>
 
-  - Weak learner를 이용해 학습을 하면서 에러가 발생하면, 그 에러에 좀 더 집중하기 위해 error에 대한 weight를 올리고, 그 에러를 잘 처리하는 방향으로 새로운 Weak learner를 학습시킵니다.
+Weak learner를 이용해 학습을 하면서 에러가 발생하면, 그 에러에 좀 더 집중하기 위해 error에 대한 weight를 올리고, 그 에러를 잘 처리하는 방향으로 새로운 Weak learner를 학습시킵니다.
 <br><br>
-  - 최종 결과는
+최종 결과는
 <br><br>
 ![Boosting2](/assets/images/Laon/week1-2-3.png){: width="70%" height="auto" .image-center}
-  <br><br>
-  과 같이 표현되며, 여기서 α<sub>t</sub>는 가중치 입니다.
-  <br><br>
-  - Boosting은 새로운 Learner를 학습할 때마다 이전 결과를 참조하는 방식이며, 이것이 뒤에 나올 Bagging과 다른 점입니다.
-  <br><br>
-  최종적으로 Weak learner로 부터의 출력을 결합하여 더 좋은 예측율을 갖는 Strong learner가 만들어 집니다.
-  <br><br>
+<br><br>
+과 같이 표현되며, 여기서 α<sub>t</sub>는 가중치 입니다.
+<br><br>
+Boosting은 새로운 Learner를 학습할 때마다 이전 결과를 참조하는 방식이며, 이것이 뒤에 나올 Bagging과 다른 점입니다.
+<br><br>
+최종적으로 Weak learner로 부터의 출력을 결합하여 더 좋은 예측율을 갖는 Strong learner가 만들어 집니다.
+<br><br>
 
 ## 3. Bagging (Bootstrap Aggregating)
 <br>
@@ -117,13 +117,13 @@ Regression의 경우는 평균(model averaging)을 취해 분산(variance)를 �
 #### Bagging과 Boosting의 차이
 <br>
 
-  - Bagging은 모든 Boostrap이 서로 독립적인 관계를 가집니다. 하지만 Boosting은 순차적으로 처리가 되며, 에러가 발생하면 그 에러의 weight를 올리기 때문에 현재의 Weak learniner가 이전 Weak learner의 영향을 받습니다.
+  1. Bagging은 모든 Boostrap이 서로 독립적인 관계를 가집니다. 하지만 Boosting은 순차적으로 처리가 되며, 에러가 발생하면 그 에러의 weight를 올리기 때문에 현재의 Weak learniner가 이전 Weak learner의 영향을 받습니다.
 <br><br>
-  - Boosting은 최종적으로 weighted vote을 하지만, Bagging은 단순 vote을 합니다.
+  2. Boosting은 최종적으로 weighted vote을 하지만, Bagging은 단순 vote을 합니다.
 <br><br>
-  - Bagging은 분산을 줄이는 것이 주 목적이지만, Boosting은 바이어스를 줄이는 것이 주 목적입니다.
+  3. Bagging은 분산을 줄이는 것이 주 목적이지만, Boosting은 바이어스를 줄이는 것이 주 목적입니다.
 <br><br>
-  - Bagging은 Overfitting문제를 해결 할 수있지만, Boosting은 Overfitting의 문제로 부터 자유롭지 못합니다.
+  4. Bagging은 Overfitting문제를 해결 할 수있지만, Boosting은 Overfitting의 문제로 부터 자유롭지 못합니다.
 <br><br>
 <br><br>
 
