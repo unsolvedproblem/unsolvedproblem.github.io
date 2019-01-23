@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[쉽게읽는 머신러닝-라온피플] 1. 머신러닝의 학습방법"
+title:  "[쉽게읽는 머신러닝-라온피플] 2. 머신러닝의 학습방법"
 date:   2019-01-23
 category: laon
 tags: laon
