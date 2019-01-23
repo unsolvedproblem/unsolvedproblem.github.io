@@ -52,9 +52,9 @@ comments: true
 ## 2. Boosting
 <br>
 
-  - 무작위로 선택하는 것보다 약간 가능성이 높은 규칙(weak learner/classifier)들을 결합시켜 보다 정확한 예측 모델을 만들어 내는 것입니다.
+무작위로 선택하는 것보다 약간 가능성이 높은 규칙(weak learner/classifier)들을 결합시켜 보다 정확한 예측 모델을 만들어 내는 것입니다.
 <br><br>
-  _(Weak learner : 무작위로 선정하는 것보다는 성공 확률이 높은, 즉 오차율이 50% 이하인 학습 규칙)_
+_(Weak learner : 무작위로 선정하는 것보다는 성공 확률이 높은, 즉 오차율이 50% 이하인 학습 규칙)_
 <br><br>
 
 #### Boosting 학습 방법
