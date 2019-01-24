@@ -2,7 +2,7 @@ html,
 body {
     background-color: #fff;
     font-size: 14px;
-    color: #797979;
+    color: #333;
     width: 100%;
     padding: 0;
     margin-left: 0;
@@ -55,7 +55,7 @@ h3 span,
 h4 span,
 h5 span,
 p span{
-    color:#ff6863;
+    color:#333;
 }
 
 p {
