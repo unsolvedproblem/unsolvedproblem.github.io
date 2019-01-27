@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[쉽게읽는 머신러닝-라온피플] 3. Decision Tree"
-date:   2019-01-27 17:55:00 -0000
+date:   2019-01-27
 category: laon
 tags: laon
 author: Polar B, 백승열
@@ -22,7 +22,6 @@ comments: true
 
 #### 역사
 <br>
-
 시드니 대학의 J.Ross QuinLan이 한 모델을 만들었고 그것을 그의 책 'Machine Learning, Vol.1, No.1, in 1975'에 실었습니다.
 <br><br>
 그의 첫 Decision Tree 알고리즘은 Iterative Dichotomiser3 (ID3)이라고 부릅니다.
@@ -30,7 +29,6 @@ comments: true
 
 #### 소개
 <br>
-
 Decision Tree는 나무 모양의 그래플르 사용하여 최적의 결정을 할 수 있도록 돕는 방법(알고리즘)입니다.
 <br>
 이 알고리즘을 Machine Learning에 적용한 것을 <U>Decision Tree Learning</U> 혹은 그냥 <U>Decision Tree</U>라고 부릅니다.
@@ -38,13 +36,11 @@ Decision Tree는 나무 모양의 그래플르 사용하여 최적의 결정을 
 
 #### 특징
 <br>
-
 기회비용에 대한 고려, 기대 이익 계산, 자원의 효율적 사용이나 위험관리 등 효율적 결정이 필요한 분야에 사용합니다.
 <br><br>
 
 #### 역할
 <br>
-
 어떤 항목에 대한 관측값(Observation)에 대하여 가지(Branch) 끝에 위치하는 기대 값(Target)과 연결시켜주는 예측 모델(Predictive Model)입니다.
 <br><br>
 
@@ -88,7 +84,7 @@ Decision Tree의 다른 예제 :
 Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러 개 있는 경우 <U>어떤 속성을 Root Node(최상단 노드)에 둘지 중요</U>합니다. 일반적으로 더 Compact하게 만드는 것이 목적이고 이를 위해 '<U>엔트로피</U>'를 이용합니다.
 <br><br>
 
-![결정트리 예제2](/assets/images/Laon/week2-1-3.png){: width="50%" height="auto" .image-center}
+![결정트리 예제2](/assets/images/Laon/week2-1-3.png){: width="30%" height="auto" .image-center}
 <br>
 (P<sub>i</sub> : 특정값 i가 일어날 확률)
 <br><br>
@@ -96,7 +92,7 @@ Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러
 ## 4. Decision Tree만들기 예제
 <br>
 
-![결정트리 만들기 예제1](/assets/images/Laon/week2-1-4.png){: width="50%" height="auto" .image-center}
+![결정트리 만들기 예제1](/assets/images/Laon/week2-1-4.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 위의 표는 14일 동안 골프를 치거나 치지 않을 경우에 조건들을 담고 있습니다. Decision Tree를 이용하면 깔끔하게 정리할 수 있고 쉽게 예측할 수 있습니다.
@@ -120,7 +116,7 @@ Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러
 
 결과적으로...
 <br><br>
-![결정트리 만들기 예제2](/assets/images/Laon/week2-1-5.png){: width="50%" height="auto" .image-center}
+![결정트리 만들기 예제2](/assets/images/Laon/week2-1-5.png){: width="70%" height="auto" .image-center}
 <br><br>
 이런 모양의 Decision Tree가 완성이 됩니다!
 <br><br>
@@ -128,7 +124,7 @@ Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러
 #### 엔트로피
 <br>
 
-![엔트로피](/assets/images/Laon/week2-1-6.png){: width="50%" height="auto" .image-center}
+![엔트로피](/assets/images/Laon/week2-1-6.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 위 그림은 속성이 2개인 경우에 데이터의 분포에 따른 엔트로피의 변화를 보여주는 그림입니다.
@@ -141,7 +137,7 @@ Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러
 ## 5. Decision Tree의 Overfitting
 <br>
 
-![Overfitting1](/assets/images/Laon/week2-1-7.png){: width="50%" height="auto" .image-center}
+![Overfitting1](/assets/images/Laon/week2-1-7.png){: width="70%" height="auto" .image-center}
 <br><br>
 통상적으로 크기(노드의 개수)가 대략적으로 23 이상이 되면 Test에 대한 정확도가 점점 감소합니다.
 <br><br>
@@ -151,18 +147,18 @@ Decision Tree를 구성하는 방법은 여러가지 입니다. 속성이 여러
 #### Overfitting의 예
 <br>
 
-![Overfitting2](/assets/images/Laon/week2-1-8.png){: width="50%" height="auto" .image-center}
+![Overfitting2](/assets/images/Laon/week2-1-8.png){: width="70%" height="auto" .image-center}
 <br><br>
 이 표를 통해서 포유류를 구분하는 모델을 만들생각입니다. 어랏! 그런데 표에 데이터 잡음으로 인해 Bat과 Whale에 엉뚱한 Label이 붙었습니다. 이것을 이용해 Decision Tree를 만들면...
 <br><br>
 
-![Overfitting3](/assets/images/Laon/week2-1-9.png){: width="50%" height="auto" .image-center}
+![Overfitting3](/assets/images/Laon/week2-1-9.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 이 모델을 통해서 다음 주어진 테스트 데이터로 테스트를 하면...
 <br><br>
 
-![Overfitting4](/assets/images/Laon/week2-1-10.png){: width="50%" height="auto" .image-center}
+![Overfitting4](/assets/images/Laon/week2-1-10.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 사람과 돌고래는 다리가 4개가 아니기 때문에 포유류가 아니라고 하는군요!
@@ -188,13 +184,13 @@ Decision Tree를 완전히 만듭니다. 그 후에 바닥부터 위로 손질�
 가지치기를 한 후의 Model :
 <br><br>
 
-![Overfitting5](/assets/images/Laon/week2-1-11.png){: width="50%" height="auto" .image-center}
+![Overfitting5](/assets/images/Laon/week2-1-11.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 가지치기를 했을 경우의 모델 정확도 그래프 :
 <br><br>
 
-![Overfitting5](/assets/images/Laon/week2-1-12.png){: width="50%" height="auto" .image-center}
+![Overfitting5](/assets/images/Laon/week2-1-12.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 ## 6. Decision Tree의 장단점
