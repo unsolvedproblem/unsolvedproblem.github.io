@@ -55,15 +55,15 @@ Decision Tree는 나무 모양의 그래플르 사용하여 최적의 결정을 
 
   - 노드(Node) :
 <br>
-각 노드(node)는 1개의 속성(attribute) Xi를 판별하는 역할
+각 노드(node)는 1개의 속성(attribute) X<sub>i</sub>를 판별하는 역할
 <br><br>
   - 가지(Branch) :
 <br>
-각 가지(branch)는 각 노드로부터 나오며, 속성(attribute) Xi에 대한 1개의 값을 가짐
+각 가지(branch)는 각 노드로부터 나오며, 속성(attribute) X<sub>i</sub>에 대한 1개의 값을 가짐
 <br><br>
   - 잎(Leaf Node) :
 <br>
-잎(leaf node) 는 최종단. 입력 데이터가 Xi 일때 그것에 대응하는 기대값 y에 해당
+잎(leaf node) 는 최종단. 입력 데이터가 X<sub>i</sub> 일때 그것에 대응하는 기대값 y에 해당
 <br><br>
 
 (예시에서) 습도, 날씨, 바람은 판단의 기준입니다.
