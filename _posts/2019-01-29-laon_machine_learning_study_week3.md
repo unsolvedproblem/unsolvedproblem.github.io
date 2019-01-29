@@ -146,12 +146,12 @@ Sparse coding은 기본적으로 아래와 같은 식으로 표현이 가능한�
 ![SC1](/assets/images/Laon/week3-1-9.png){: width="30%" height="auto" .image-center}
 <br><br>
 
-![SC2](/assets/images/Laon/week3-1-10.png){: width="30%" height="auto" .image-center}
+![SC2](/assets/images/Laon/week3-1-10.png){: width="70%" height="auto" .image-center}
 <br><br>
 Sparse coding을 이용하여 Denoising을 한 예입니다.
 <br><br>
 
-![SC3](/assets/images/Laon/week3-1-11.png){: width="30%" height="auto" .image-center}
+![SC3](/assets/images/Laon/week3-1-11.png){: width="70%" height="auto" .image-center}
 <br><br>
 이 예는 Inpainting(영상 복원 기술) sparse coding을 참고한 경우입니다.
 <br><br>
@@ -159,7 +159,7 @@ Sparse coding을 이용하여 Denoising을 한 예입니다.
 Sparse coding도 AE와 마찬가지로 데이터를 Compact하게 만드는 것이 목적입니다. Sparse coding의 기저함수는 원 데이터 보다 큽니다. 벡터 s에서 대부분의 계수를 0으로 만들면 결과를 Compact하게 만들 수 있습니다.
 <br><br>
 
-![SC4](/assets/images/Laon/week3-1-12.png){: width="30%" height="auto" .image-center}
+![SC4](/assets/images/Laon/week3-1-12.png){: width="70%" height="auto" .image-center}
 <br><br>
 
 _(마찬가지로 좀더 자세한 것은 후에 Hands-on Machine Learning책을 정리할때 다루겠습니다.)_
