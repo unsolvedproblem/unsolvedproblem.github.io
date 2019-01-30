@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerrank 30 Days of Code 2 [Intro to Conditional Statements]"
+title:  "Hackerrank 30 Days of Code 3 [Intro to Conditional Statements]"
 date:   2019-01-29
 category: code_practice
 tags: coding_practice
