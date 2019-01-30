@@ -31,7 +31,6 @@ class Person:
             print("You are a teenager.")
         else:
             print("You are old.")
-
 ~~~
 
 궁금하신게 있다면 메일 주세요.  
