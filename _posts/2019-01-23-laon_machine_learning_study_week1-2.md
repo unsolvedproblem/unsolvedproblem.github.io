@@ -115,7 +115,7 @@ Regression의 경우는 평균(model averaging)을 취해 분산(variance)를 �
 #### Bagging과 Boosting의 차이
 <br>
 
-  1. Boosting은 모든 데이터를 순차적으로 처리하며, 에러가 발생하면 그 에러의 weight를 올리기 때문에 현재의 Weak learner가 이전 Weak learner의 영향을 받습니다.
+  1. Bagging은 독립적으로 weak learner를 생성하는데 반해 Boosting은 모든 데이터를 순차적으로 처리하며, 에러가 발생하면 그 에러의 weight를 올리기 때문에 현재의 Weak learner가 이전 Weak learner의 영향을 받습니다.
 <br><br>
   2. Boosting은 최종적으로 weighted vote을 하지만, Bagging은 단순 vote을 합니다.
 <br><br>
