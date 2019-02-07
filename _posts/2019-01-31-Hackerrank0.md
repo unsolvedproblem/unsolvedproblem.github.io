@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerrank 30 Days of Code 5 [Let's Review]"
+title:  "Hackerrank 30 Days of Code 6 [Let's Review]"
 date:   2019-01-31
 category: code_practice
 tags: coding_practice

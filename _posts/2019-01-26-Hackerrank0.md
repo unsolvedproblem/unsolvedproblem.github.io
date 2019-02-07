@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerrank 30 Days of Code 0 [Hellow, World.]"
+title:  "Hackerrank 30 Days of Code 0 [Hello, World.]"
 date:   2019-01-26
 category: code_practice
 tags: coding_practice

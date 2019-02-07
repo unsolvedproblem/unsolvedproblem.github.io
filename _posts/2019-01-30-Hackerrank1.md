@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hackerrank 30 Days of Code 7 [Arrays]"
-date:   2019-02-01
+title:  "Hackerrank 30 Days of Code 5 [Loops]"
+date:   2019-01-30
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
@@ -11,17 +11,12 @@ comments: true
 기초를 갈고 닦기 위한 스탭!  
 Hackerrank 30 Days of Code  
 문제   
-[Arrays](https://www.hackerrank.com/challenges/30-arrays/problem)
+[Loops](https://www.hackerrank.com/challenges/30-loops/problem)
 
 ~~~
-if __name__ == '__main__':
-    n = int(input())
-
-    arr = list(map(int, input().rstrip().split()))
-
-    arr.reverse()
-
-    print(' '.join(map(str, arr)))
+def simpleMath(n):
+    for i in range(1,11):
+        print('%s x %s =' %(n, i), n * i )
 ~~~
 
 궁금하신게 있다면 메일 주세요.  
