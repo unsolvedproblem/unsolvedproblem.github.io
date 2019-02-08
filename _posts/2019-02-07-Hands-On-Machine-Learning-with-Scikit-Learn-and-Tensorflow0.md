@@ -123,7 +123,7 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br>
 이제 학습 결과를 어떻게 평가할 지 결정해야 합니다. 보통은 RMSE(Root Mean Square Error) 방법을 주로 사용합니다. RMSE는 에러의 표준편차를 측정합니다.
 <br><br>
-$RMSE(X, h) = (\frac{1}{m}\sum^m_{i=1}(h(x^{(i)}) - y^{(i)})^2)^{\frac{1}{2}}$asdf
+<center>$RMSE(X, h) = (\frac{1}{m}\sum^m_{i=1}(h(x^{(i)}) - y^{(i)})^2)^{\frac{1}{2}}$</center>
 <br><br>
 - 여기서 $m$은 데이터의 개수고, $x^{i}$는 $i$번 째 데이터 벡터(특성 값들이 각 원소인 벡터)이고, $y^{i}$는 $i$번 째 데이터의 label입니다. 또, $X$는 모든 데이터의 특성값들을 원소로 갖는 행렬이고, $h$는 우리의 예측 함수입니다.  
 <br><br>
@@ -144,9 +144,9 @@ $$<br><br>
 
 - 아까 말씀드린 것처럼 우리는 여러가지 방법으로 학습 결과를 평가할 수 있습니다.
 - MAE(Mean Absolute Error)<br>
-  $$ MAE(X, h) = \frac{1}{m}\sum^m_{i = 1}|h(x^{(i)}) - y{(i)}|$$
+  <center>$ MAE(X, h) = \frac{1}{m}\sum^m_{i = 1}|h(x^{(i)}) - y{(i)}|$</center>
 - l_k norm 등등이 있습니다.<br>
-$$\| v \|_{k} = (|\nu_0|^k + |\nu_1|^k +\cdots + |\nu_n|^k)^\frac{1}{k} $$
+<center>$\| v \|_{k} = (|\nu_0|^k + |\nu_1|^k +\cdots + |\nu_n|^k)^\frac{1}{k} $</center>
   - 참고로 norm index(여기선 k)가 클수록, 큰 값에 영향을 많이 받고 작은 값에 영향을 덜 받습니다.<br>
   - 데이터에 큰 값이 많이 있지 않을 때는 RMSE가 꽤 좋은 평가 방법이고 자주 쓰입니다.
 <br><br>
