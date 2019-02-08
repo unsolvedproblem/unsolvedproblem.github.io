@@ -69,7 +69,7 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br><br>
 이 단원에서는 California Housing Prices dataset from the Statlib repository를 다루겠습니다!
 <br><br>
-![California Housing Prices dataset](/assets/images/Hands-on/ch2fig1.png)
+![California Housing Prices dataset](/assets/images/Hands-on/ch2fig1.png){: width="70%" height="auto" .image-center}
 <br><br>
 ## 1.0 Look at the Big Picture
 <br>
@@ -89,7 +89,7 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br><br>
 우리의 목적에 따라 우리가 어떻게 이 문제를 바라볼 지, 어떤 알고리즘을 써야할 지, 어떤 방식으로 우리의 모델을 평가할 지, 그리고 얼마나 이 문제에 노력을 쏟을 지가 결정됩니다.
 <br><br>
-![Our task](/assets/images/Hands-on/ch2fig2.png)
+![Our task](/assets/images/Hands-on/ch2fig2.png){: width="70%" height="auto" .image-center}
 <br><br>
 - 우리는 과거에는 어떤 솔루션을 쓰는 지도 알아봐야 합니다. 왜냐하면 지금 쓰고 있는 해결책들이 우리에게 문제에 대한 통찰력을 줄 수 있기 때문입니다. 하지만 지금은 과거에 있던 해결책들이 유용하지 않다고 생각해보죠(생략하겠다는 뜻입니다 ㅎㅎ).
 <br><br>
