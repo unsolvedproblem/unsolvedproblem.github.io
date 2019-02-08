@@ -134,11 +134,11 @@ X = \begin{pmatrix}
 $$
 <br><br>
 - 아까 말씀드린 것처럼 우리는 여러가지 방법으로 학습 결과를 평가할 수 있습니다.
-  - MAE(Mean Absolute Error)  
+  - MAE(Mean Absolute Error)<br>
     $$ MAE(X, h) = \frac{1}{m}\sum^m_{i = 1}|h(x^{(i)}) - y{(i)}|$$
-  - l_k norm 등등이 있습니다.  
+  - l_k norm 등등이 있습니다.<br>
 $$\| v \|_{k} = (|\nu_0|^k + |\nu_1|^k +\cdots + |\nu_n|^k)^\frac{1}{k} $$
-  - 참고로 norm index(여기선 k)가 클수록, 큰 값에 영향을 많이 받고 작은 값에 영향을 덜 받습니다.  <br>
+  - 참고로 norm index(여기선 k)가 클수록, 큰 값에 영향을 많이 받고 작은 값에 영향을 덜 받습니다.<br>
   - 데이터에 큰 값이 많이 있지 않을 때는 RMSE가 꽤 좋은 평가 방법이고 자주 쓰입니다.
 <br><br>
 ## 1.3 Check the Assumptions
