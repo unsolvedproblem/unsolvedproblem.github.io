@@ -103,7 +103,7 @@ plt.show()
 이 중에서는 집 값을 예측하는 데 가장 유용할 것 같은 특성은 median_income인 것 같군요. 이 상관관계 산점도를 확대해보겠습니다.
 <br><br>
 
-![Correlations of housing price and median_income](/assets/images/Hands-on/ch2fig12.png){: width="100%" height="auto" .image-center}
+![Correlations of housing price and median_income](/assets/images/Hands-on/ch2fig13.png){: width="100%" height="auto" .image-center}
 <br>
 이 그래프는 몇 가지 사실을 보여줍니다.
 1. 상관관계가 매우 강합니다. 위쪽으로 향하는 경향을 볼 수 있고 포인트들도 너무 널리 퍼져 있지 않습니다.
