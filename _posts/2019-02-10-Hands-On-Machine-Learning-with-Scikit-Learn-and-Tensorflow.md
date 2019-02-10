@@ -9,7 +9,7 @@ comments: true
 ---
 _Author : Duck Hyeun, Ryu_
 <br><br>
-안녕하세요. 팀 언플(Team Unsolved Problem)에 에디터 ㅋ헬 킴(Khel Kim), 김현호입니다. 오늘은 저희 팀에 오리, Duck Hyeun Ryu의 글을 정리만 해서 업데이트하겠습니다.
+안녕하세요. 팀 언플(Team Unsolved Problem)에 에디터 ㅋ헬 킴(Khel Kim), 김현호입니다. 오늘은 저희 팀에 오리, Duck Hyeun Ryu의 글을 정리 해서 업데이트하겠습니다.
 <br>
 오늘은 지난 시간 Section 3. Discover and visualize the data to gain insights에 이어서 Section 4. Prepare the data for Machine Learning algorithms에 들어가겠습니다.
 <br>
