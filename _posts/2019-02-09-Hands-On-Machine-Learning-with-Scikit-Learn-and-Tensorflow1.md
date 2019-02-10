@@ -13,7 +13,7 @@ comments: true
 <br>
 오늘은 지난 시간 Section 2.4 Create Test Set에 이어서 Section 3. Discover and visualize the data to gain insights에 들어가겠습니다.
 <br>
-[[Hands-on ML] Chapter 2. End-to-End Machine Learning Project3](http://127.0.0.1:4000/hands-on%20ml/2019/02/09/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow1.html)
+[[Hands-on ML] Chapter 2. End-to-End Machine Learning Project3](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/08/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow0.html)
 <br><br><br>
 그럼, 시작하겠습니다!
 <br><br><br>
