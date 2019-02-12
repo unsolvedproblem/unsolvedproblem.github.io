@@ -13,7 +13,7 @@ _Author : Duck Hyeun, Ryu_
 <br>
 오늘은 지난 시간 Section 4. Prepare the data for Machine Learning algorithms에 이어서 Section 5. Select a model and train it에 들어가겠습니다.
 <br>
-[[Hands-on ML] Chapter 2. End-to-End Machine Learning Project4](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/09/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow1.html)
+[[Hands-on ML] Chapter 2. End-to-End Machine Learning Project5](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/10/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow.html)
 <br><br><br>
 그럼, 시작하겠습니다!
 <br><br><br>
