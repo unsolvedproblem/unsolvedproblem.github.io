@@ -7,7 +7,8 @@ tags: hands-on ML
 author: Khel Kim, 김현호
 comments: true
 ---
-
+<br><br>
+[코딩관련깃허브](https://github.com/rickiepark/handson-ml)
 <br><br>
 안녕하세요. 팀 언플(Team Unsolved Problem)에 에디터 ㅋ헬 킴(Khel Kim), 김현호입니다. 라온 피플 포스팅을 백곰 백승열 에디터가 잘 정리해서 올려주었습니다.
 <br>
@@ -70,9 +71,6 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br><br>
   - Datasets subreddit
 <br><br>
-
-
-
 이 단원에서는 California Housing Prices dataset from the Statlib repository를 다루겠습니다!
 <br><br>
 ![California Housing Prices dataset](/assets/images/Hands-on/ch2fig1.png){: width="70%" height="auto" .image-center}
@@ -94,7 +92,7 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 
 ## 1.1 Frame the Problem
 <br>
-데이터를 건드리기 전에 우리의 목적이 무엇인지 명확하게 규명해야합니다. 여기서는 우리의 목적이 우리의 결과물이 또 다른 머신러닝의 데이터로 쓰인다고 가정합시다.
+데이터를 건들기 전에 우리의 목적이 무엇인지 명확하게 규명해야합니다. 여기서는 우리의 목적이 우리의 결과물이 또 다른 머신러닝의 데이터로 쓰인다고 가정합시다.
 <br><br>
 - 우리의 목적: 각 구역별 평균 집 값의 예측이 또 다른 머신러닝 시스템에 입력되게 하는 것.
 <br><br>
@@ -106,8 +104,6 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br><br>
 - 우리는 과거에는 어떤 솔루션을 쓰는 지도 알아봐야 합니다. 왜냐하면 지금 쓰고 있는 해결책들이 우리에게 문제에 대한 통찰력을 줄 수 있기 때문입니다. 하지만 지금은 과거에 있던 해결책들이 유용하지 않다고 생각해보죠(생략하겠다는 뜻입니다 ㅎㅎ).
 <br><br>
-
-
 이제 머신러닝의 관점에서 이 문제를 바라봅시다.
 
 
@@ -133,7 +129,7 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 - 여기서 $m$은 데이터의 개수고, $x^{i}$는 $i$번 째 데이터 벡터(특성 값들이 각 원소인 벡터)이고, $y^{i}$는 $i$번 째 데이터의 label입니다. 또, $X$는 모든 데이터의 특성값들을 원소로 갖는 행렬이고, $h$는 우리의 예측 함수입니다.  
 <br><br>
   - ex)<br>
-$$x^{(1)}=\begin{pmatrix} 1 \\ 10 \\ 100 \\ 1000 \end{pmatrix}$$<br><br>
+$$x^{(1)}=\begin{pmatrix} 1 \\ 10 \\ 100 \\ 1000 \end{pmatrix}$$<br>
 $$y^{(i)} = 200$$<br>  
 $$X = \begin{pmatrix}
 (x^{(1)})^T \\
