@@ -70,6 +70,8 @@ Chapter 1같은 경우에는 저희가 라온 피플 포스팅에서 어느정�
 <br><br>
   - Datasets subreddit
 <br><br>
+
+
 이 단원에서는 California Housing Prices dataset from the Statlib repository를 다루겠습니다!
 <br><br>
 ![California Housing Prices dataset](/assets/images/Hands-on/ch2fig1.png){: width="70%" height="auto" .image-center}
