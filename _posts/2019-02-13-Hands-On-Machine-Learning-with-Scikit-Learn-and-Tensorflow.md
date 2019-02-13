@@ -73,8 +73,8 @@ y = y.astype(np.int) ##mnist의 target이라는 key안에는 value가 문자열�
 ###읭스럽게도 4번 돌리면 home/scikit_learn_datasets/~/opemml.org에 data가 생김
 ~~~
 저는 어떻게 돌아가는 매커니즘인지 모르겠는데, 이 코드를 세 번째까지는 돌릴 때마다 오류가 발생하다가, 4 번째에 데이터가 생깁니다. 어떻게 이러는지 모르겠네요...;;;
-<br>
-*<u>참고로 Bunch와 dictionary는 상당히 비슷한 자료형태입니다. 하지만 Bunch와 dictionary와의 차이는 Bunch 자료형은 value를 부를 때, DATA.KEY라는 식으로도 value를 부를 수 있습니다.</u>*
+<br><br>
+*<u>참고로 Bunch와 dictionary는 상당히 비슷한 자료형태입니다. 하지만 Bunch와 dictionary와의 차이는 Bunch 자료형은 value를 부를 때, DATA.KEY라는 식으로도 value를 부를 수 있습니다.</u>*<br><br>
 ![Bunch](/assets/images/Hands-on/ch3fig1.png){: width="100%" height="auto" .image-center}
 <br>
 데이터 개수를 관찰해 보죠.
@@ -349,7 +349,7 @@ precisions, recalls, thresholds = precision_recall_curve(y_train_5, y_scores)
 ~~~
 <br>
 여기서 제 사적인 궁금증이 생겼었습니다. 일단 그림을 보시죠.
-<br>
+<br><br>
 ![궁금증](/assets/images/Hands-on/ch3fig5.png){: width="100%" height="auto" .image-center}
 <br>
 Q2는 쉽게 알 수 있지만, Q1은 왜인지 알기가 어려웠습니다. 하지만 열심히 탐구해서 정답 비슷한걸 알게 된 것 같아서 여기에 적겠습니다. ㅎㅎ
@@ -387,7 +387,7 @@ __threshold가 매우 작다면__
 정밀도 곡선이 재현율 곡선보다 왜 더 울퉁불퉁한지도 위에 설명을 잘 이해하셨다면 이해하실 수 있습니다.
 <br><br>
 재현율에 대한 정밀도 곡선을 그리면 좋은 정밀도/재현율 트레이드오프를 선택할 수 있습니다.
-<br>
+<br><br>
 ![정밀도 재현율 함수2](/assets/images/Hands-on/ch3fig8.png){: width="100%" height="auto" .image-center}
 <br><br>
 만약 정밀도 90%가 목표라고 합시다.
@@ -414,6 +414,7 @@ from sklearn.metrics import roc_curve
 
 fpr, tpr, threshold = roc_curve(y_train_5, y_scores)
 ~~~
+<br>
 ![ROC 곡선](/assets/images/Hands-on/ch3fig9.png){: width="100%" height="auto" .image-center}
 <br><br>
 거짓 양성 비율도 진짜 양성 비율(재현율)과 트레이드오프 관계가 있습니다. 좋은 분류기는 y=x 그래프와 ROC 곡선이 최대한 멀리 떨어져 있어야 합니다. 곡선 아래의 면적을 새로운 지표로 생각하고 이를 통해 분류기들을 비교할 수 있습니다. 이를 **AUC(area under the curve) 측정** 이라고 합니다.
@@ -441,6 +442,7 @@ y_scores_forest = y_probas_forest[:, 1] ## 5 클래스에 들어갈 확률을 �
 fpr_forest, tpr_forest, thresholds_forest = roc_curve(y_train_5,y_scores_forest)
 ## y_train_5는 bool 값을 가지고 있는 배열
 ~~~
+<br>
 ![ROC 곡선 비교](/assets/images/Hands-on/ch3fig10.png){: width="100%" height="auto" .image-center}
 <br>
 ~~~
@@ -663,7 +665,7 @@ array([[45]])
 
 <br><br>
 **다시 복귀**
-<br>
+<br><br>
 가운데를 0으로 만들고 다시 관찰해보겠습니다(오차 부분의 색 대조 만들겠습니다).
 ![직관적 비교2](/assets/images/Hands-on/ch3fig12.png){: width="100%" height="auto" .image-center}
 <br><br>
@@ -770,7 +772,7 @@ def plot_digit(data):
 ~~~
 ![노이즈 샘플](/assets/images/Hands-on/ch3fig14.png){: width="100%" height="auto" .image-center}
 <br><br>
-샘플들을 훈련 시키고, 노이즈가 들어간 샘플을 모델에 넣으면, 알고리즘이 샘플의 값(픽셀)들을 추정하고 출력합니다(다중 출력).
+샘플들을 훈련 시키고, 노이즈가 들어간 샘플을 모델에 넣으면, 알고리즘이 샘플의 값(픽셀)들을 추정하고 출력합니다(다중 출력).<br><br>
 ![다중 출력](/assets/images/Hands-on/ch3fig15.png){: width="100%" height="auto" .image-center}
 <br><br><br><br>
 저희는 2단원에서 회귀 하는 방법을 배우고 3단원에서는 분류를 하는 방법을 배웠습니다. 다음 단원부터는 모델 하나하나를 뜯어서 살펴보도록 하겠습니다.
