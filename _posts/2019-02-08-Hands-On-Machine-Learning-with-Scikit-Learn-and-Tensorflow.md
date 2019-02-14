@@ -50,7 +50,7 @@ comments: true
 ## 2.2 Download the Data
 <br>
 드디어 코드를 작성해 보겠습니다.<br>
-저희는 웹브라우저를 통해 housing.csv 데이터를 다운로드 할 수 있습니다. 하지만 보통 다운로드 해주는 함수를 만드는 것을 더 선호합니다. 왜냐하면 데이터가 정기적으로 업데이트 된다면 조금의 수정으로 최신 데이터를 얻을 수 있기 때문입니다.<br><br>
+저희는 웹브라우저를 통해 housing.csv 데이터를 다운로드 할 수 있습니다. 하지만 보통 다운로드 해주는 함수를 만드는 것을 더 선호합니다. 왜냐하면 데이터가 정기적으로 업데이트된다면 조금의 수정으로 최신 데이터를 얻을 수 있기 때문입니다.<br><br>
 코드를 좀 보실까요(저희의 에디터는 쥬피터 노트북입니다).
 ~~~
 import os
@@ -136,7 +136,7 @@ housing 데이터프레임에 맨 위 5 객체의 내용을 확인합니다.
 <br><br>
 ![Top five rows](/assets/images/Hands-on/ch2fig3.png){: width="100%" height="auto" .image-center}
 <br><br>
-여기서 확인해야 할 것은 이 데이터가 어떤 특성들을 가지고 있는 지 입니다.<br>
+여기서 확인해야 할 것은 이 데이터가 어떤 특성들을 가졌는지 입니다.<br>
 이 데이터는 longitude, latitude, housing_meadian_age, total_rooms, total_bedrooms, population, households, median_income, median_house_vale, 그리고 ocean_proximity라는 특성을 가지고 있습니다.<br><br>
 머신러닝을 할 때 데이터를 바라볼 때 중요하게 여겨지는 부분 중 하나는 주어진 데이터의 특성이 명목형 변수인지 연속형 변수인지를 확인하는 것입니다. <br><br>
 이럴 떄 쓰기 좋은 함수가 데이터프레임의 info() 메소드입니다. 이 함수를 통해 결측치의 개수도 파악할 수 있습니다. <br><br>
