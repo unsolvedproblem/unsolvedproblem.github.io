@@ -88,9 +88,9 @@ y.shape ## 결과 (70000,)
 데이터 하나를 잡아서 그려봅시다.
 <br>
 ~~~
-some_digit = X[36000]
-some_digit_image = some_digit.reshape(28, 28) ### image 픽셀의 형태대로 shape를 만듦
-plt.imshow(some_digit_image, cmap = matplotlib.cm.binary,
+some_digit_9 = X[36000]
+some_digit_9_image = some_digit_9.reshape(28, 28) ### image 픽셀의 형태대로 shape를 만듦
+plt.imshow(some_digit_9_image, cmap = matplotlib.cm.binary,
            interpolation="bilinear")
 ###matplotlib.cm.binary: 색 입히는 방식.색을 흰색에서부터 검은색으로 칠해줌
 ###interpolation의 default값이 nearest임
@@ -98,7 +98,7 @@ plt.axis("off")
 
 plt.show()
 ~~~
-![some_digit](/assets/images/Hands-on/ch3fig2.png){: width="50%" height="auto" .image-center}
+![some_digit_9](/assets/images/Hands-on/ch3fig2.png){: width="50%" height="auto" .image-center}
 <br>
 제 생각에는 9처럼 보이는데 실제로도 9인지 확인해 봅시다.
 <br>
@@ -140,8 +140,8 @@ sgd_clf = SGDClassifier(max_iter=5, random_state=42) ##4단원에서 자세히 �
 sgd_clf.fit(X_train, y_train_5) ##fit 메소드를 사용, 각 객체 변수에 특정 값들을 저장.
 ~~~
 ~~~
-sgd_clf.predict([some_digit, X[1]]) ##some_digit은 (1, 784) 배열
-##some_digit이 5인가 ==> false
+sgd_clf.predict([some_digit_9, X[1]]) ##some_digit_9은 (1, 784) 배열
+##some_digit_9이 5인가 ==> false
 ~~~
 우리의 분류기는 X[36000]과 X[1]은 5가 아니라고 답하는군요!
 <br><br>
@@ -192,7 +192,7 @@ cross_val_score(sgd_clf, X_train, y_train_5, cv=3, scoring='accuracy')
 #결과
 array([0.9605 , 0.95595, 0.95375])
 ~~~
-무려 정확도 95% 성능을 내는 분류기를 만들었습니다. 하지만 여기엔 트릭이 숨어있습니다. 왜냐면 샘플의 개수가 차이가 많이나는 분류기에서 교차 검증은 효과적이지 못하기 때문입니다. 예를 들어 모든 것을 5가 아니라고 말하는 분류기를 만들어서 교차검증을 해보죠.
+무려 정확도 95% 성능을 내는 분류기를 만들었습니다. 하지만 여기엔 트릭이 숨어있습니다. 왜냐면 샘플 개수의 차이가 많이나는 분류기에서 교차 검증은 효과적이지 못하기 때문입니다(만약 데이터가 5가 10개, 5가 아닌 것이 90개인 샘플들로 구성되어있으면, 모든 샘플에게 5가 아니라고 말하는 분류기의 정확도는 90%입니다). 예를 들어 모든 것을 5가 아니라고 말하는 분류기를 만들어서 교차검증을 해보죠.
 ~~~
 from sklearn.base import BaseEstimator
 class Never5Classifier(BaseEstimator):
@@ -210,7 +210,7 @@ cross_val_score(never_5_clf, X_train, y_train_5, cv=3, scoring="accuracy")
 #결과
 array([0.909  , 0.90745, 0.9125 ])
 ~~~
-무려 정확도가 90%이군요... 이런 식으로 샘플의 개수가 많이 차이나는 분류기에서 교차 검증은 효과적이지 못합니다.
+무려 정확도가 90%이군요... 이런 식으로 클래스별 샘플 개수가 많이 차이나는 데이터셋을 분류할 때, 교차 검증은 효과적이지 못합니다.
 <br><br>
 #### 3.3.2 오차 행렬
 <br>
@@ -246,7 +246,7 @@ array([[52972,  1607],
 - 실제로 5인 것을 모델이 5가 아니라고 말한 개수가 989
 - 실제로 5인 것을 모델이 5라고 말한 개수가 4432
 
-라는 뜻입니다. 오차 행렬을 말로 설명하려면 어려우니 예제부터 봤습니다. 그림으로 한 번 더 보시죠.
+라는 뜻입니다. 오차 행렬을 말로 설명하려면 어려우니 예제부터 봤습니다. 표로 한 번 더 보시죠.
 <br>
 ![오차 행렬](/assets/images/Hands-on/ch3fig3.png){: width="70%" height="auto" .image-center}
 <br><br>
@@ -328,7 +328,7 @@ f1_score(y_train_5, y_train_pred)
 
 결과적으로 두 지표는 트레이드 오프 관계입니다. 상황에 따라 정밀도가 중요한 상황과 재현율이 중요한 상황이 있습니다.
 1. 암환자를 구별할 때, 임곗값을 낮춰서 재현율을 높이는 것이 좋습니다. 왜냐하면 실제로 암에 걸리지는 않은 환자가 있을 수는 있지만 암에 걸린 환자는 확실히 치료를 시도할 수 있으니까요.
-2. 비싼 물건을 살지 말지 고민할 때, 임곗값을 높혀서 정밀도를 높이는 것이 좋습니다. 왜냐하면 기회비용이 비싸기 때문에 내가 선택한 것이 무조건 나에게 잘 맞아야 좋기 때문입니다.
+2. 판사가 재판을 할 때, 임곗값을 높여서 정밀도를 높이는 것이 좋습니다. 왜냐하면 무죄추정의 원칙에 의해서 무고한 사람이 감옥에 가면 안되기 때문입니다.
 
 <br>
 적절한 임곗값을 구하기 위해 모든 샘플의 점수를 구해봅시다.
@@ -490,7 +490,7 @@ recall_score(y_train_5, y_train_pred_forest)
 **SGDClassifier 훈련**
 ~~~
 sgd_clf.fit(X_train, y_train)
-sgd_clf.predict([some_digit])
+sgd_clf.predict([some_digit_9])
 ~~~
 ~~~
 #결과
@@ -498,8 +498,8 @@ array([4]) ##틀렸네요 ㅋㅋㅋ
 ~~~
 이는 10개의 분류기를 통과하면서 점수가 가장 높은 클래스를 선택한 것입니다.
 ~~~
-some_digit_scores = sgd_clf.decision_function([some_digit])
-some_digit_scores
+some_digit_9_scores = sgd_clf.decision_function([some_digit_9])
+some_digit_9_scores
 ~~~
 ~~~
 #결과
@@ -509,7 +509,7 @@ array([[-736165.13534356, -391182.59305387, -752094.90919363,
         -249064.39096412]])
 ~~~
 ~~~
-np.argmax(some_digit_scores)
+np.argmax(some_digit_9_scores)
 ~~~
 ~~~
 4
@@ -528,7 +528,7 @@ OvO나 OvA를 강제로 선택해 줄 수 있습니다.
 from sklearn.multiclass import OneVsOneClassifier
 ovo_clf = OneVsOneClassifier(SGDClassifier(max_iter=5, random_state=42))
 ovo_clf.fit(X_train, y_train) ##fit 매소드를 실행하면서 여러가지 객체 변수에 값을 집어넣음.
-ovo_clf.predict([some_digit])
+ovo_clf.predict([some_digit_9])
 ~~~
 ~~~
 #결과
@@ -545,7 +545,7 @@ len(ovo_clf.estimators_) ##분류기 개수
 **RandomForestClassifier 훈련**
 ~~~
 forest_clf.fit(X_train, y_train)
-forest_clf.predict([some_digit])
+forest_clf.predict([some_digit_9])
 ~~~
 ~~~
 #결과
@@ -553,7 +553,7 @@ array([9])
 ~~~
 분류기가 추정하는 정도
 ~~~
-forest_clf.predict_proba([some_digit, X_train[10]])
+forest_clf.predict_proba([some_digit_9, X_train[10]])
 ~~~
 ~~~
 #결과
@@ -685,7 +685,7 @@ array([[45]])
 <br><br>
 <i>개개의 에러 분석을 해볼 수 있지만 분류기가 무슨 일을 하고, 왜 잘못되었는지에 대해 통찰을 얻을 수 있지만, 더 어렵고 시간이 오래 걸립니다.</i>
 <br><br>
-3과 5의 샘플을 그려보겠습니다.
+우리의 분류기의 오차 행렬을 관찰했을 때, 우리의 분류기는 3과 5를 많이 헷갈려합니다. 이 개개의 에러를 분석하기 위해 3과 5의 샘플을 그려보겠습니다.
 ~~~
 def plot_digits(instances, images_per_row=10, **options):
     size = 28
@@ -735,10 +735,10 @@ knn_clf = KNeighborsClassifier()
 knn_clf.fit(X_train, y_multilabel)
 ~~~
 <br>
-some_digit에 대해 잘 추정하는지 확인하겠습니다.
+some_digit_9에 대해 잘 추정하는지 확인하겠습니다.
 <br>
 ~~~
-knn_clf.predict([some_digit])
+knn_clf.predict([some_digit_9])
 ~~~
 ~~~
 #결과

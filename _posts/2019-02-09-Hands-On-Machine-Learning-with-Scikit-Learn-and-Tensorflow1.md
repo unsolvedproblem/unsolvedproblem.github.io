@@ -60,7 +60,7 @@ housing 데이터에는 지리 정보에 해당하는 위도와 경도가 있으
 housing.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4,
 s=housing["population"]/100, label="population", figsize=(10,7),
 c="median_house_value", colormap=plt.get_cmap('jet'), colorbar=True, sharex=False
-) #legend=>#sharex = subplot의 x축을 공유할 것인가
+)
 plt.show()
 ~~~
 <br><br>
