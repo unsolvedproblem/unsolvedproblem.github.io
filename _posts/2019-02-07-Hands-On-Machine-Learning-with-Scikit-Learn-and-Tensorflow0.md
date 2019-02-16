@@ -8,6 +8,7 @@ author: Khel Kim, 김현호
 comments: true
 ---
 <br><br>
+핸즈온 머신러닝  
 [코딩관련깃허브](https://github.com/rickiepark/handson-ml)
 <br><br>
 안녕하세요. 팀 언플(Team Unsolved Problem)에 에디터 ㅋ헬 킴(Khel Kim), 김현호입니다. 라온 피플 포스팅을 백곰 백승열 에디터가 잘 정리해서 올려주었습니다.

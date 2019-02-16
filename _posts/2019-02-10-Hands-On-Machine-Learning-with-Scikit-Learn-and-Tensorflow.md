@@ -8,6 +8,7 @@ author: Khel Kim, 김현호
 comments: true
 ---
 <br><br>
+핸즈온 머신러닝  
 [코딩관련깃허브](https://github.com/rickiepark/handson-ml)
 _Author : Duck Hyeun, Ryu_
 <br><br>
