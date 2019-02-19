@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Hands-On ML] Chapter 4. Training Models"
+title:  "[Hands-On ML] Chapter 4. Training Models(미완성)"
 date:   2019-02-17
 category: hands-on ML
 tags: hands-on ML
@@ -264,3 +264,14 @@ lin_reg.intercept_, lin_reg.coef_
 <br>
 ![경사 하강법1](/assets/images/Hands-on/ch4fig6.png){: width="70%" height="auto" .image-center}
 <br><br>
+
+경사 하강법의 문제점
+<br>
+![경사 하강법1](/assets/images/Hands-on/ch4fig7.png){: width="70%" height="auto" .image-center}
+<br>
+만약 비용 함수가 아니라 위와 같은 형태면 전역 최솟값(Global minimum)보다 덜 좋은 지역 최솟값(Local minimum)에 수렴할 수 있습니다.
+<br>
+_(다행이 선형 회귀에 쓰이는 MSE 비용함수는 볼록 함수(Convex function)입니다. 전역 최솟값만 존재하죠.)_
+<br><br>
+
+경사 하강법을 사용할 떄는 특성들의 스케일이 같도록 만들어줘야 합니다. 그렇지 않으면 최솟값에 도달하는 시간이 오래걸립니다. 따라서 스케일러(예를들면 사이킷런의 StandardSaler)를 사용해 스케일링을 해줍시다.
