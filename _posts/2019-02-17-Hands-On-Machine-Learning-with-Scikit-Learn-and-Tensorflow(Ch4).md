@@ -4,14 +4,14 @@ title:  "[Hands-On ML] Chapter 4. Training Models"
 date:   2019-02-17
 category: hands-on ML
 tags: hands-on ML
-author: Polar b, 백승열
+author: Polar B, 백승열
 comments: true
 ---
 <br><br>
 [코딩관련깃허브](https://github.com/rickiepark/handson-ml)
 <br><br>
 _Author : Duck Hyeun, Ryu_
-<br>
+<br><br>
 안녕하세요. 팀 언플(Team Unsolved Problem)의 또다른 에디터인 Polar b 입니다! 오늘 포스팅할 것은 헨즈온 머신러닝의 4장, Training Models, 입니다. 팀 일원인 Duck군의 글을 정리해서 다시 업데이트하는 글이 되겠습니다!
 <br><br>
 
@@ -70,9 +70,9 @@ _Author : Duck Hyeun, Ryu_
 - $\theta_j$ : $j$번째 모델 파라미터
 <br><br>
 
-선형 모델의 예측 벡터형태
+**선형 모델의 예측 벡터형태**
 <br>
-<center>$$ \hat{y} = h_{\theta}(x) = \theta^T \dot x $$</center>
+<center>$$ \hat{y} = h_{\theta}(x) = \theta^T \cdot x $$</center>
 <br>
 - $\theta$ : 편향 $\theta_0$와 $\theta_1$에서 $\theta_n$까지의 특성 가중치를 담고 있는 모델의 파라미터
 - $\theta^T$ : $\theta$의 전치(Transpose)
@@ -84,13 +84,161 @@ _Author : Duck Hyeun, Ryu_
 
 위의 식이 바로 선형 회귀 모델입니다. 이제 훈련을 시켜야겠죠? 모델을 훈련시킨다는 뜻은 모델이 훈련세트에 가장 잘 맞도록 모델 파라미터를 설정하는 것입니다. 그러기 위해선 모델의 예측값이 얼마나 실제 타겟값과 비슷한지(즉, 모델의 성능이 얼마나 좋은지) 알 수 있어야합니다.
 <br><br>
-그것을 알게 해주는 것이 바로 회귀에서 가장 널리 쓰이는 성능 측정 지표인 평균 제곱근 오차(RMSE) 입니다.(2장을 다루는 포스터중 첫번째 포스트를 확인해보시기 바랍니다.)따라서 선형 회기 모델을 훈련시킨다는 뜻은 RMSE를 최소화하는 $\theta$를 찾아낸다는 것입니다. RMSE와 평균 제곱 오차(Mean square error, MSE)는 최소화하는 것이 같은 결과는 내지만 MSE가 더 간단합니다.
+그것을 알게 해주는 것이 바로 회귀에서 가장 널리 쓰이는 성능 측정 지표인 평균 제곱근 오차(RMSE) 입니다.(2장을 다루는 포스터중 첫번째 포스트를 확인해보시기 바랍니다.)따라서 선형 회기 모델을 훈련시킨다는 뜻은 RMSE를 최소화하는 $\theta$를 찾아낸다는 것입니다. RMSE와 평균 제곱 오차(Mean square error, MSE)는 최소화하는 것이 같은 결과는 내지만 MSE가 더 간단합니다. 따라서 우리는 MSE를 쓰도록 하겠습니다.
+<br><br>
 
-평균 제곱 오차 비용함수(Mean square error cost function)
+**평균 제곱 오차 비용함수(Mean square error cost function)**
 <br>
-<center>$$ MSE(X,h_\theta) = \frac{1}{m} \sum_{i=1}^{m} (\theta^T \dot x_i - y_i)^2 $$</center>
+<center>$$ MSE(X,h_\theta) = \frac{1}{m} \sum_{i=1}^{m} (\theta^T \cdot x_i - y_i)^2 $$</center>
 <br>
 - $m$ : 선형모델을 훈련시킬 데이터 수
-- $\theta^T \dot x_i$ : i번째 데이터의 예측값
+- $\theta^T \cdot x_i$ : i번째 데이터의 예측값
 - $y_i$ : $i$번째 데이터의 실제 타겟값
 <br><br>
+
+## 4.1.1 정규방정식(Normal Equation)
+<br>
+
+방금 보았던 비용 함수를 최소화하는 $\theta$값을  찾는 식이 있습니다. 바로 정규 방정식입니다.
+<br>
+
+**정규방정식(Normal equation)**
+<br>
+<center> $$ \hat{\theta} = (X^T \cdot X)^{-1} \dot X^T \cdot y $$ </center>
+<br>
+- $\hat{\theta}$ : 비용 함수를 최소화하는 $\theta$값
+- $y$ : $y_1$부터 $y_m$까지 포함하는 타깃 벡터
+<br><br>
+
+위 공식을 테스트해보죠! 선형st한 데이터를 만들겠습니다.
+<br>
+~~~
+## 100개의 변수 생성
+import numpy as np
+
+X = 2*np.random.rand(100,1)  ## 100X1의 의 배열로 무작위 숫자를 생성
+y = 4+3*X+np.random.randn(100,1) ## 약간의 노이즈를 섞은 일차함수
+## rand는 rand 명령은 0부터 1사이에서 균일한 확률 분포로 실수 난수를 생성
+## randn은 정규확률분포(Standard normal distribution)를 따르는 난수를 생성
+~~~
+<br><br>
+
+이것을 matplotlib을 이용해서 그래프로 표현해보면...
+<br>
+~~~
+import matplotlib.pyplot as plt
+plt.plot(X, y, "b.")
+plt.xlabel("$x_1$", fontsize=18)
+plt.ylabel("$y$", rotation=0, fontsize=18)
+plt.axis([0, 2, 0, 15])
+plt.show()
+~~~
+![정규방정식1](/assets/images/Hands-on/ch4fig1.png){: width="70%" height="auto" .image-center}
+<br>
+그럴싸 하쥬?
+<br><br>
+
+이제 여기서 정규방정식을 사용해서 $\hat{\theta}$를 계산해봅시다.
+<br>
+~~~
+x_b = np.c_[np.ones((100,1)),X] ## 모든 샘플에 X0 = 1을 추가함
+theta_best = np.linalg.inv(x_b.T.dot(x_b)).dot(x_b.T).dot(y) ## 정규방정식 코드구현
+~~~
+<br>
+- np.linalg.inv() : 넘파이의 선형대수 모듈(np.linalg)의 역행열 계산함수(.inv())
+- dot() : 행렬 곱셈 매서드
+<br>
+(정규방정식을 numpy로 구현한 것입니다.)
+<br><br>
+
+결과는?!
+![정규방정식2](/assets/images/Hands-on/ch4fig2.png){: width="100%" height="auto" .image-center}
+<br><br>
+
+우리가 사용한 함수는 $y = 3x + 노이즈$ 였습니다. 따라서 우리는 $\theta_0 = 4, \theta_1 = 3$이 나오기를 원했지만, 실제로는 $\theta_0 = 3.80162531, \theta_1 = 3.04060515$가 나왔습니다. 노이즈 때문에 근사하긴 하지만 정확한 값은 나오지 않습니다.
+<br><br>
+
+그럼 이 새로운 $\hat{\theta}$(=theta_best)를 사용해서 예측을 해보겠습니다.
+<br>
+~~~
+X_new = np.array([[0], [2]])
+X_new_b = np.c_[np.ones((2,1)), X_new] ## 모든 샘플에 x0 = 1을 추가함
+y_predict =  X_new_b.dot(theta_best) ## 훈련된 θ로 y를 예측하자
+y_predict
+~~~
+<br><br>
+
+- X_new_b :
+$$
+  \begin{pmatrix}
+  1 & 0 \\
+  1 & 2 \\
+  \end{pmatrix}
+$$
+<br>
+- y_predict : X_new_b와 theta_best를 행렬곱 한것입니다.
+$$
+\begin{cases}
+  1 \dot \theta_0 + 0 \cdot \theta_1 \\
+  1 \dot \theta_0 + 2 \cdot \theta_1
+\end{cases}
+$$
+<br><br>
+
+그럼 이 모델의 예측을 그래프에 그려보도록 하겠습니다.
+~~~
+plt.plot(X_new, y_predict, "r-", linewidth=2, label = 'prediction')
+## 예측된 두개의 점을 빨간색 선으로 잇는다, 선의 굵기는 2, 범례는 'prediction'
+plt.plot(X, y, "b.") ## X와 y에 해당 되는 점에 파란색 점을 찍음
+plt.xlabel("$x_1$", fontsize=18) ## x축 밑에 이름은 x1으로 하고 size는 18
+plt.ylabel("$y$", rotation=0, fontsize=18)
+## y축 왼쪽에 이름은 y로 하고 회전시키지 말고 글자크기는 18
+plt.legend( loc="upper left", fontsize=14) ## prediction의 위치를 왼쪽 위로 하고 크기는 14
+plt.axis([0, 2, 0, 15]) ## x축의 크기를 0에서2 , y축의 크기는 0에서 15
+plt.show()
+~~~
+<br>
+![정규방정식3](/assets/images/Hands-on/ch4fig3.png){: width="70%" height="auto" .image-center}
+<br><br>
+
+이 작업을 해주는 사이킷런의 코드가 있습니다.
+<br>
+~~~
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+lin_reg.fit(X, y)
+lin_reg.intercept_, lin_reg.coef_
+~~~
+- lin_reg.intercept_ : $\theta_0$, lin_reg.coef_ : $\theta_1$
+<br>
+![정규방정식4](/assets/images/Hands-on/ch4fig4.png){: width="100%" height="auto" .image-center}
+<br>
+위에서 구했던 theta_best와 같은 값이 나옵니다.
+<br><br>
+
+## 4.1.2 계산 복잡도(Computational complexity)
+<br>
+
+계산 복잡도는 일반적으로 컴퓨터가 주어진 식(혹은 코드)을 처리하는 속도와 처리할 때의 메모리 사용량를 의미합니다. 전자를 시간 복잡도, 후자를 공간 복잡도라고 합니다. 여러 표기 법이 있지만 여기서는 일반적으로 사용하는 빅오 표기법(Big-O notation)를 간단히 알아보도록 하겠습니다.
+<br><br>
+
+#### 빅오 표기법(Big-O notation)
+
+알고리즘의 소요시간이 입력의 크기의 n에 대해 $O(n^2)$이라면 최대 $n^2$에 비례하는 시간이 소요됩니다. 수학적으로 표현하자면 Ο(g(n))은 점근적 증가율이 g(n)을 넘지 않는 모든 함수의 집합입니다.
+<br>
+<center> $$ O(g(n)) = \{f(n) : there exist positive constants c and n_0 such that 0 \leq f(n) \leq cg(n) for all n \req n_0 \} $$</center>
+<br>
+예를 들면
+- $9n^2 + 4n = O(n^2)$
+- $n^2 + 19 = O(n^2)$
+(빅오 표기법은 집합으로 정의되기 때문에 $9n^2 + 4n ∈ Ο(n2)$으로 표현해야 되지만 일반저긍로 $9n^2 + 4n = Ο(n^2)로 표기합니다)
+- $12n^3 + 3n + 19 = O(n^3) > O(n^2)$
+<br><br>
+
+우리가 위에서 구현한 정규방정식은 크기가 $(n+1) \times (n+1)$되는 행렬 $X^T \cdot X$의 역행력을 계산합니다.(n : 특성수) 이 역행렬의 계산 복잡도는 일반적으로 $O(n^2.4)$에서 $O(n^3)$사이 입니다. 즉, 특성수가 두배로 늘어난다면 복잡도는 적게는 2^2.4배 크게는 2^3배 만큼 늘어납니다. 특성수가 많아지면 정규방정식 처리 속도는 매우 느려진다는 의미입니다.
+<br><br>
+
+그래도 이 공식(역행렬 계산함수)의 복잡도는 샘플 수에는 선형적이라고 합니다. 따라서 메모리 공간만 충분하다면 큰 훈련세트도 무리없이 처리할 수 있습니다.
+<br><br>
+
+정규 방정식이나 다른 알고리즘으로 학습시킨 선형 회귀 모델의 예측은 처리 속도가 매우 빠릅니다. 그리고 그 예측 계산 복잡도는 샘플 수와 특성 수에 비례합니다. 즉, 샘플 수나 특성 수가 두배로 늘어나면 처리에 걸리는 시간도 두배로 늘어난다는 것이죠.
