@@ -116,10 +116,11 @@ tree_rmse_scores = np.sqrt(-scores)
 <br>
 ![Score1](/assets/images/Hands-on/ch2fig23.png){: width="100%" height="auto" .image-center}
 <br><br>
-DecisionTreeRegressor 모델의 결과가 실제로는 선형 회귀 모델보다 결과가 좋지 않습니다. 교차 검증으로 모델의 성능을 추정하는 것뿐만 아니라 이 추정이 얼마나 정확한지를 표준편차로 측정할 수 있습니다.
-<br><br>
 비교를 위해 선형 회귀 모델의 점수를 계산해보겠습니다.
 ![Score2](/assets/images/Hands-on/ch2fig24.png){: width="100%" height="auto" .image-center}
+<br><br>
+DecisionTreeRegressor 모델의 결과가 실제로는 선형 회귀 모델보다 결과가 좋지 않습니다. 교차 검증으로 모델의 성능을 추정하는 것뿐만 아니라 이 추정이 얼마나 정확한지를 표준편차로 측정할 수 있습니다.
+
 <br>
 DecisionTreeRegressor 모델이 과대적합되어 선형 회귀 모델보다 성능이 나쁩니다.
 <br><br>

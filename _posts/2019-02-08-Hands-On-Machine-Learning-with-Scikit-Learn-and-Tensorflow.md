@@ -150,7 +150,7 @@ housing 데이터프레임에 맨 위 5 객체의 내용을 확인합니다.
 
 연속형 변수는 어떻게 구성되어 있는 지 확인해봅시다. describe() 메서드로 확인할 수 있습니다.<br><br>
 ![numerical value describe](/assets/images/Hands-on/ch2fig6.png){: width="100%" height="auto" .image-center}<br>
-통계적 수치들이 나왔군요. 이 수치들은 결측치를 무시하고 낸 결과들입니다.<br><br>
+통계적 수치들이 나왔군요. 이 수치들은 결측치를 무시하고 낸 결과들입니다(자동으로 무시해줍니다).<br><br>
 이렇게 숫자가 많이 있을 때는 그림으로 보는게 직관에 더 와닿을 때가 있습니다.
 ~~~
 %matplotlib inline
