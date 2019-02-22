@@ -17,7 +17,7 @@ _Author : Duck Hyeun, Ryu_
 
 오늘은 지난 시간 'Chapter 3. 분류'에 이어서 'Chapter 4. 모델 훈련'에 들어가겠습니다.
 <br>
-[[Hands-on ML] Chapter 2. End-to-End Machine Learning Project6](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/13/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow.html)
+[[Hands-On ML] Chapter 3. Classification](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/13/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow.html)
 <br><br>
 
 그럼, 출발해볼까요?!
