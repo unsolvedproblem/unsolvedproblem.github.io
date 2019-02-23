@@ -11,7 +11,7 @@ comments: true
 기초를 갈고 닦기 위한 스탭!  
 Hackerrank 30 Days of Code  
 문제   
-[More Exceptions]https://www.hackerrank.com/challenges/30-more-exceptions/problem)
+[More Exceptions](https://www.hackerrank.com/challenges/30-more-exceptions/problem)
 
 ~~~
 class MyError(Exception):
