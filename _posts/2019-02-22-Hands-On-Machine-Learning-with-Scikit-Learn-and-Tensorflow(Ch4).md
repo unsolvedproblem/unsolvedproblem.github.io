@@ -87,7 +87,7 @@ $$ \hat{y} = h_{\theta}(x) = \theta^T \cdot x $$
 
 위의 식이 바로 선형 회귀 모델입니다. 이제 훈련을 시켜야겠죠? 모델을 훈련시킨다는 뜻은 모델이 훈련세트에 가장 잘 맞도록 모델 파라미터를 설정하는 것입니다. 그러기 위해선 모델의 예측값이 얼마나 실제 타겟값과 비슷한 지(즉, 모델의 성능이 얼마나 좋은 지) 알 수 있어야합니다.
 <br><br>
-그것을 알게 해주는 것이 바로 회귀에서 가장 널리 쓰이는 성능 측정 지표인 평균 제곱근 오차(RMSE) 입니다(2장을 다루는 포스터 중 첫번째 포스트를 확인해보시기 바랍니다). 따라서 선형 회기 모델을 훈련시킨다는 뜻은 RMSE를 최소화하는 $\theta$를 찾아낸다는 것입니다. RMSE와 평균 제곱 오차(Mean square error, MSE)는 최소화하는 것이 같은 결과는 내지만 MSE가 더 간단합니다. 따라서 우리는 MSE를 쓰도록 하겠습니다.
+그것을 알게 해주는 것이 바로 회귀에서 가장 널리 쓰이는 성능 측정 지표인 평균 제곱근 오차(RMSE) 입니다(2장을 다루는 포스터 중 첫번째 포스트를 확인해보시기 바랍니다). 따라서 선형 회기 모델을 훈련시킨다는 뜻은 RMSE를 최소화하는 $\theta$를 찾아낸다는 것입니다. RMSE와 평균 제곱 오차(Mean square error, MSE)는 최소화하는 것이 같은 결과는 내지면서 더 간단합니다. 따라서 우리는 MSE를 쓰도록 하겠습니다.
 <br><br>
 
 **평균 제곱 오차 비용함수(Mean square error cost function)**
@@ -123,8 +123,8 @@ $$ MSE(X,h_\theta) = \frac{1}{m} \sum_{i=1}^{m} (\theta^T \cdot x_i - y_i)^2 $$
 ## 100개의 변수 생성
 import numpy as np
 
-X = 2*np.random.rand(100,1)  ## 100X1의 의 배열로 무작위 숫자를 생성
-y = 4+3*X+np.random.randn(100,1) ## 약간의 노이즈를 섞은 일차함수
+X = 2 * np.random.rand(100,1)  ## 100X1의 의 배열로 무작위 숫자를 생성
+y = 4 + 3 * X+np.random.randn(100,1) ## 약간의 노이즈를 섞은 일차함수
 ## rand는 rand 명령은 0부터 1사이에서 균일한 확률 분포로 실수 난수를 생성
 ## randn은 정규확률분포(Standard normal distribution)를 따르는 난수를 생성
 ~~~
@@ -171,6 +171,10 @@ X_new = np.array([[0], [2]])
 X_new_b = np.c_[np.ones((2,1)), X_new] ## 모든 샘플에 x0 = 1을 추가함
 y_predict =  X_new_b.dot(theta_best) ## 훈련된 θ로 y를 예측하자
 y_predict
+
+## 결과
+array([[3.80162531],
+    [9.8828356]])
 ~~~
 <br><br>
 
@@ -193,13 +197,13 @@ $$
 
 그럼 이 모델의 예측을 그래프에 그려보도록 하겠습니다.
 ~~~
-plt.plot(X_new, y_predict, "r-", linewidth=2, label = 'prediction')
+plt.plot(X_new, y_predict, "r-", linewidth=2, label='prediction')
 ## 예측된 두개의 점을 빨간색 선으로 잇는다, 선의 굵기는 2, 범례는 'prediction'
 plt.plot(X, y, "b.") ## X와 y에 해당 되는 점에 파란색 점을 찍음
 plt.xlabel("$x_1$", fontsize=18) ## x축 밑에 이름은 x1으로 하고 size는 18
 plt.ylabel("$y$", rotation=0, fontsize=18)
 ## y축 왼쪽에 이름은 y로 하고 회전시키지 말고 글자크기는 18
-plt.legend( loc="upper left", fontsize=14) ## prediction의 위치를 왼쪽 위로 하고 크기는 14
+plt.legend(loc="upper left", fontsize=14) ## prediction의 위치를 왼쪽 위로 하고 크기는 14
 plt.axis([0, 2, 0, 15]) ## x축의 크기를 0에서2 , y축의 크기는 0에서 15
 plt.show()
 ~~~
@@ -230,7 +234,7 @@ lin_reg.intercept_, lin_reg.coef_
 
 #### 빅오 표기법(Big-O notation)
 
-알고리즘의 소요시간이 입력의 크기의 n에 대해 $O(n^2)$이라면 최대 $n^2$에 비례하는 시간이 소요됩니다. 수학적으로 표현하자면 Ο(g(n))은 점근적 증가율이 g(n)을 넘지 않는 모든 함수의 집합입니다.
+알고리즘의 소요시간이 입력의 크기의 n에 대해 $O(n^2)$이라면 최대 $n^2$에 비례하는 시간이 소요됩니다. 수학적으로 표현하자면 $Ο(g(n))$은 점근적 증가율이 $g(n)$을 넘지 않는 모든 함수의 집합입니다.
 <br>
 
  $$ O(g(n)) = \{f(n) : there\;exist\;positive\;constants\;c\;and\;n_0$$
@@ -281,7 +285,7 @@ lin_reg.intercept_, lin_reg.coef_
 <br>
 만약 비용 함수가 아니라 위와 같은 형태면 전역 최솟값(Global minimum)보다 덜 좋은 지역 최솟값(Local minimum)에 수렴할 수 있습니다.
 <br>
-_(다행이 선형 회귀에 쓰이는 MSE 비용함수는 볼록 함수(Convex function)입니다. 전역 최솟값만 존재하죠.)_
+_(다행이 선형 회귀에 쓰이는 비용함수 MSE는 볼록 함수(Convex function)입니다. 전역 최솟값만 존재하죠.)_
 <br><br>
 
 경사 하강법을 사용할 때는 특성들의 스케일이 같도록 만들어줘야 합니다. 그렇지 않으면 최솟값에 도달하는 시간이 오래 걸립니다. 따라서 스케일러(예를들면 사이킷런의 StandardSaler)를 사용해 스케일링을 해줍시다.
@@ -328,7 +332,7 @@ $$ \theta_{(next step)} = \theta - η \nabla_\theta MSE(\theta)$$
 
 ~~~
 eta = 0.1 # 학습률
-n_iterations = 1000 ## 반복 횟수ㅍ
+n_iterations = 1000 ## 반복 횟수
 m = 100
 theta = np.random.randn(2,1) ## 정규분포 확률로 난수를 골라 2X1행렬에 넣음
 for iteration in range(n_iterations):
@@ -355,7 +359,7 @@ theta_path_sgd = []
 m = len(x_b) # 100
 np.random.seed(42)
 
-n_epochs = 50 ## 한 반복에서 m번 되풀이 되는데, 이 때 한 번의 반복을 epoc라 한다.
+n_epochs = 50 ## 한 반복에서 m번 되풀이 되는데, 이 때 한 번의 반복을 epoch라 한다.
 t0, t1 = 5, 50  # 학습 스케줄 하이퍼파라미터(매 반복에서 학습률을 결정하는 파라미터)
 def learning_schedule(t):
     return t0 / (t + t1)
@@ -370,7 +374,7 @@ for epoch in range(n_epochs):
             plt.plot(X_new, y_predict, style)# 그래프를 그려라 # 책에는 빠짐
         random_index = np.random.randint(m) ## 0부터 99사이의 값 중 하나를 랜덤으로 선택
         xi = x_b[random_index:random_index+1] ## 데이터 중 하나의 샘플을 선택
-        yi = y[random_index:random_index+1] ## 선택한 샘플 데이터의 기댓값 선택
+        yi = y[random_index:random_index+1] ## 선택한 샘플 데이터의 타겟값 선택
         gradients = 2 * xi.T.dot(xi.dot(theta) - yi) ## 하나의 샘플로만 그래디언트 계산
         eta = learning_schedule(epoch * m + i) ## epoc와 i가 감소 할 때마다 학습률 감소
         theta = theta - eta * gradients ## 새로운 세타를 대입
@@ -393,7 +397,7 @@ plt.show()                                           # 책에는 빠짐
 ![배치 경사 하강법2](/assets/images/Hands-on/ch4fig9.png){: width="70%" height="auto" .image-center}
 <br><br>
 
-랜덤으로 선택이 되므로 어떤 샘플은 선택되지 않을 수 있습니다. 모든 샘플을 다 사용하게 하려면 훈련 세트를 섞고 하나씩 선택 후 다음 에포크에서 다시 섞어야 되는데 이렇게 하면 시간이 오래 걸립니다.
+샘플들이 랜덤으로 선택이 되므로 한 에포크에서 어떤 샘플은 선택되지 않을 수 있습니다. 모든 샘플을 다 사용하게 하려면 한 에포크에서 훈련 세트를 섞고 하나씩 차례대로 하나씩 선택 후 다음 에포크에서 다시 훈련 세트를 섞어야 되는데 이렇게 하면 수렴 시간이 오래 걸립니다.
 <br><br>
 
 사이킷런에서 확률적 경사 하강법을 지원해 줍니다.
@@ -417,11 +421,11 @@ sgd_reg.fit(X, y.ravel()) ## y.ravel은 배열을 1차원 배열로 만들어주
 ![미니 배치 경사 하강법2](/assets/images/Hands-on/ch4fig10.png){: width="70%" height="auto" .image-center}
 <br><br>
 
-데이터의 개수가 많으면 배치 경사 하강법이 좋지 않습니다. 특성의 수(데이터의 벡터 자원)이 크다면 정규 방정식은 좋지 않습니다.
+데이터의 개수가 많으면 배치 경사 하강법이 좋지 않습니다. 특성의 수(데이터의 벡터 차원)가 크다면 정규 방정식은 좋지 않습니다.
 <br><br>
-외부 메모리 학습 지원이란 컴퓨터 한 대의 메인 메모리에 들어갈 수 없는 아주 큰 데이터셋을 학습하는 시스템에 온라인 학습 알고리즘을 사용하는 것입니다.
+외부 메모리 학습 지원이란 컴퓨터 한 대의 메인 메모리에 들어갈 수 없는 아주 큰 데이터셋을 학습할 때 시스템에 온라인 학습 알고리즘을 사용하는 것입니다.
 <br><br>
-확률적 경사 하강법과 미니 배치 경사 하강법은 훈련할 때 전체 샘플 하나 혹은 작은 묶음으로 훈련을 하므로 외부 메모리 학습이 가능합니다.
+확률적 경사 하강법과 미니 배치 경사 하강법은 훈련할 때 샘플 하나 혹은 작은 묶음으로 훈련을 하므로 외부 메모리 학습이 가능합니다.
 <br><br>
 
 ## 4.3 다항 회귀(Polynomial Regression)
@@ -435,7 +439,7 @@ sgd_reg.fit(X, y.ravel()) ## y.ravel은 배열을 1차원 배열로 만들어주
 ~~~
 ## 약간의 노이즈가 있는 2차 함수를 따르는 데이터셋 만들기
 m = 100
-X = 6 * np.random.rand(m, 1)-3 ## -3부터 3 까지 랜덤하게
+X = 6 * np.random.rand(m, 1) - 3 ## -3부터 3 까지 랜덤하게
 y = 0.5 * X**2 + X + 2 + np.random.randn(m, 1)  ##  y 값은 약간의 노이즈가 있는 2차 함수
 
 ## x,y를 그래프에 나타내면
@@ -450,7 +454,7 @@ plt.show()
 ![다항회귀1](/assets/images/Hands-on/ch4fig11.png){: width="70%" height="auto" .image-center}
 <br><br>
 
-2차 함수의 그래프에 노이즈가 섞인 것이기 때문에 직선을 따르지 않습니다. 데이터의 제곱 값을 하나의 특성으로 추가하여 선형회귀<를 하면 파라미터들을 훈련시킬 수 있습니다.
+2차 함수의 그래프에 노이즈가 섞인 것이기 때문에 직선을 따르지 않습니다. 데이터의 제곱 값을 하나의 특성으로 추가하여 선형회귀를 하면 파라미터들을 훈련시킬 수 있습니다.
 <br><br>
 
 사이킷런의 PolynomieaFeatures로 데이터의 제곱값들을 특성에 추가합니다.
@@ -479,7 +483,7 @@ lin_reg.intercept_, lin_reg.coef_
 $y$절편은 2.09060416, $x^2$의 계수는 1.00332088, $x$의 계수는 0.45237349로 예측을 하였습니다.
 <br><br>
 
-만약 특성의 개수가 하나가 아니라 두개라면 PolynomialFeatures가 주어진 차수까지 특성 간의 모든 교차항을 추가합니다. 예를 들어 특성 $a$와 $b$가 있고 차수가 2라면 $a^2$, $b^2$뿐만 아니라 $ab$도 추가됩니다.
+만약 특성의 개수가 하나가 아니라 두개라면 PolynomialFeatures가 주어진 차수까지 특성 간의 모든 교차항을 추가합니다. 예를 들어 특성 $a$와 $b$가 있고 차수가 $2$라면 $a^2$, $b^2$뿐만 아니라 $ab$도 추가됩니다.
 <br><br>
 
 ## 4.4 학습 곡선(Learning Curve)
@@ -497,7 +501,7 @@ from sklearn.model_selection import train_test_split
 def plot_learning_curves(model, X, y):  
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=20)
     ## X와 y 각각에서 20%를 test set(validate set)으로 쓰고 나머지는 train set으로 씀
-    ## seed는 10
+    ## seed는 20
     train_errors, val_errors = [], []
     for m in range(1, len(X_train)):
         model.fit(X_train[:m], y_train[:m])  ##  X의 train set의 1열에서 m열까지 모델에 훈련
