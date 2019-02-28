@@ -335,7 +335,7 @@ f1_score(y_train_5, y_train_pred)
 적절한 임곗값을 구하기 위해 모든 샘플의 점수를 구해봅시다.
 <br>
 ~~~
-y_scores = cross_val_predict(sgd_clf, X_train, y_train_5, cv=3,\
+y_scores = cross_val_predict(sgd_clf, X_train, y_train_5, cv=3,
                             method="decision_function")
 ##어떤 식으로 scoring을 계산하는지는 모릅니다.
 ##나중에 4단원에서 안나오면 다시 공부할 것입니다.
