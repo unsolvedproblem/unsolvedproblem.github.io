@@ -75,7 +75,7 @@ plt.rcParams['axes.unicode_minus'] = False
 하이퍼파라미터 $\alpha$는 모델을 얼마나 규제할지 조절합니다.
 - $\alpha=0$이면 릿지 회귀는 선형 회귀와 같아진다.
 - $\alpha$가 아주 크면 모든 가중치가 거의 $0$에 가까워지고 결국 데이터의 타겟값의 평균을 지나는 수평선이 된다($\theta_0$만 남는다).
-![릿지 회귀](/assets/images/Hands-on/ch4fig14.png){: width="70%" height="auto" .image-center}
+![릿지 회귀](/assets/images/Hands-on/Ch4fig14.png){: width="70%" height="auto" .image-center}
 
 릿지 회귀는 입력특성의 스케일링에 민감하기 때문에 스케일을 맞추는 것이 중요합니다. 규제가 있는 모델은 대부분 마찬가지입니다.
 <br><br>
@@ -195,7 +195,7 @@ array([1.54333232])
 #### 4.5.4 조기 종료
 <br>
 검증 에러가 최솟값에 도달하면 바로 훈련을 중지시키는 방법입니다.
-![조기 종료](/assets/images/Hands-on/ch4fig15.png){: width="70%" height="auto" .image-center}
+![조기 종료](/assets/images/Hands-on/Ch4fig15.png){: width="70%" height="auto" .image-center}
 이 그래프는 배치 경사하강법으로 훈련시킨 모델을 보여줍니다. 그래프를 보면 검증 에러가 점점 감소하다가 다시 증가합니다. 이 말은 모델이 훈련 데이터에 과대적합(overfitting)이 되기 시작했다는 말입니다. 따라서 검증에러가 최소값이 됐을 때 훈련을 멈춰야 합니다. 훈련을 멈추고 이 때의 파라미터를 쓰는 것을 조기 종료라고 합니다. 확률적 경사하강법이나 미니 배치 경사하강법은 곡선이 들쭉날쭉해서 최솟값을 찾기 어려울 수 있습니다. 검증 에러가 일정시간 동안 최솟값보다 내려가지 않을 때 최솟값일 때의 모델 파라미터를 사용해야합니다.
 <br><br>
 ~~~
@@ -247,7 +247,7 @@ $$\hat{p} = h_{\theta}(x) = \sigma(\theta^T \cdot x)$$
 $$\sigma(t) = \frac{1}{1+exp(-t)}$$
 
 
-![시그모이드 함수](/assets/images/Hands-on/ch4fig16.png){: width="70%" height="auto" .image-center}
+![시그모이드 함수](/assets/images/Hands-on/Ch4fig16.png){: width="70%" height="auto" .image-center}
 $\hat{p}$은 확률이고 이에 대한 예측 $\hat{y}$은 이렇게 구합니다.
 
 $$\hat{y} = \begin{cases}
@@ -313,7 +313,7 @@ log_reg = LogisticRegression(solver='liblinear', random_state=42)
 log_reg.fit(X, y)
 ~~~
 분류기에게 꽃잎의 너비가 0~3cm인 꽃에 대해 모델의 추정 확률을 계산해보겠습니다.
-![로지스틱 회귀 그림](/assets/images/Hands-on/ch4fig17.png){: width="100%" height="auto" .image-center}
+![로지스틱 회귀 그림](/assets/images/Hands-on/Ch4fig17.png){: width="100%" height="auto" .image-center}
 <br>
 위에 그림에서 세모로 표시한 부분이 실제 타겟값이 Iris-Verginica인 샘플들이고, 밑에 네모는 나머지 두 품종입니다. 꽃잎의 길이가 2cm 이상인 샘플들은 무조건 Iris-Verginica이고 1cm 이하면 무조건 Iris-Verginica가 아닙니다. 하지만 그 사이는 확신할 수 없습니다. 따라서 모두의 확률이 50%인 1.6cm에서 우리의 결정 경계가(decision boundary)가 형성될 것입니다. 즉, 1.6cm보다 크면 Iris-Verginica라고 분류할 것이고 아니면 아니라고 분류할 것입니다.
 ~~~
