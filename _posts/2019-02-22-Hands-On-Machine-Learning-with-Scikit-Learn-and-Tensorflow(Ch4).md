@@ -313,7 +313,7 @@ $$ \nabla_\theta MSE(\theta) =
 \frac{\partial}{\partial \theta_1} MSE(\theta) \\
 \vdots \\
 \frac{\partial}{\partial \theta_n} MSE(\theta) \\
-\end{pmatrix}
+\end{pmatrix} \\
 = \frac{2}{m} X^T \cdot (X \cdot \theta - y) $$
 <br>
 - 모델 파라미터마다 편도함수를 성분으로 갖고 있는 벡터
