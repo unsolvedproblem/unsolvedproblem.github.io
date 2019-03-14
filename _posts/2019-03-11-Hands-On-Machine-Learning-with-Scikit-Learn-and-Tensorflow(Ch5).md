@@ -13,8 +13,8 @@ comments: true
 <br><br>
 안녕하세요. 팀 언플(Team Unsolved Problem)의 Polar B 입니다! 오늘 포스팅할 것은 핸즈온 머신러닝의 5장 Support Vector Machine 입니다. 머신러닝 모델 중에서도 꽤나 강력한 모델입니다.
 <br><br>
-강력한 만큼 내용도 쉽지 않습니다. 한번 차근차근 책을 따라가 보도록 하겠습니다!
-<br>
+강력한 만큼 내용도 쉽지 않습니다.저희는 먼저 SVM을 사이킷런으로 어떻게 사용할 수 있는지 배우고, 수학적으로는 어떻게 작동하는지 배우겠습니다. 한번 차근차근 책을 따라가 보도록 하겠습니다!
+<br><br>
 [[Hands-on ML] Chapter 4. Training Models(2)](https://unsolvedproblem.github.io/hands-on%20ml/2019/02/26/Hands-On-Machine-Learning-with-Scikit-Learn-and-Tensorflow(Ch4-2).html)
 <br><br>
 그럼 시작해볼까요?
@@ -44,7 +44,9 @@ plt.rcParams['ytick.labelsize'] = 12
 plt.rcParams['font.family'] = 'HCR Batang'
 plt.rcParams['axes.unicode_minus'] = False
 ~~~
--5.0 Introduction
+
+<br>
+- 5.0 Introduction
 - 5.1 선형 SVM 분류
 - 5.2 비선형 SVM 분류
   - 5.2.1 다항식 커널
@@ -218,7 +220,7 @@ SVM 모델이 과대적합(Overfitting)이라면 C를 감소시켜 모델을 규
 ![비선형 SVM분류1](/assets/images/Hands-on/Ch5fig5.png){: width="70%" height="auto" .image-center}
 <br><br>
 
-사이키런을 사용하여 구현하면(4.3절 '다항 회귀'에서 소개한) PolynomialFeatures 변화기와 StandardScaler, LinearSVC를 연결하여 Pipeline을 만들면 좋습니다.
+사이키런을 사용하여 구현할 때(4.3절 '다항 회귀'에서 소개한) PolynomialFeatures 변화기와 StandardScaler, LinearSVC를 연결하여 Pipeline을 만들면 좋습니다.
 <br><br>
 
 이것을 Moons 데이터 셋에 적용해 보겠습니다.
@@ -261,7 +263,7 @@ plot_dataset(X, y, [-1.5, 2.5, -1, 1.5])
 #### 5.2.1 다항식 커널
 <br>
 
-다항식 특성을 추가하는 것은 간단하지만, 한계가 있습니다. SVM을 가용할 때 Kernel trick이라는 수학적 기교를 적용할 수 있습니다. 특성을 추가하지 않았으면서 다항식 특성을 많이 추가한 것과 같은 결과를 얻을 수 있습니다. 이는 SVC 파이썬 클래스에 구현되어 있습니다.
+다항식 특성을 추가하는 것은 간단하지만, 한계가 있습니다. SVM을 가용할 때 Kernel trick이라는 수학적 기교를 적용할 수 있습니다. 특성을 추가하지 않으면서 다항식 특성을 많이 추가한 것과 같은 결과를 얻을 수 있는 트릭입니다. 이는 SVC 파이썬 클래스에 구현되어 있습니다.
 <br><br>
 
 moons 데이터셋으로 테스트해보겠습니다
@@ -323,7 +325,7 @@ plt.title(r"$d=10, r=100, C=5$", fontsize=18)
 
 **Gaussian RBF**
 <br>
-$$ \phi γ(x,\ell) = exp(-γ \Vert x-\ell \Vert^2) $$
+$$ \phi_γ (x,\ell) = exp(-γ \Vert x-\ell \Vert^2) $$
 <br><br>
 이 함수의 값은 0부터 1까지 변화하며 종모양으로 나타납니다. gamma는 0보다 커야 됩니다. 값이 작을수록 폭이 넓은 종 모양이 됩니다.
 <br><br>
@@ -665,22 +667,22 @@ plot_3D_decision_function(ax1, w=svm_clf2.coef_[0], b=svm_clf2.intercept_[0])
 <br><br>
 ![목적함수](/assets/images/Hands-on/Ch5fig15.png){: width="70%" height="auto" .image-center}
 <br>
-_(그링에서 알 수 있듯이 $W$가 작아지자 범위가 (-1,1)에서 (-2,2)로 늘어났습니다.)_
+_(그림에서 알 수 있듯이 $w_1$이 작아지자 x의 범위가 (-1,1)에서 (-2,2)로 늘어났습니다.)_
 <br><br>
 
-우리의 목적은 마진을 크게 해서 경계를 확실하게 만드는 것입니다. 따라서 $\Vert{w}$를 최소화해야 합니다.
+우리의 목적은 마진을 크게 해서 경계를 확실하게 만드는 것입니다. 따라서 $||w||$를 최소화해야 합니다.
 <br><br>
 
 마진 오류를 하나도 만들지 않는 하드마진을 구현하려면,
 <br>
-$$  {minimize \atop w,b} \frac{1}{2} w^t \cdot w  $$
+$$  {\operatorname{minimize} \atop w,b} \frac{1}{2} w^T \cdot w  $$
 <br>
 $$ \text{[조건]} i=1,2, \cdots, m \text{일 때} \quad t^{(i)}(w^T \cdot x^{(i)} + b) \geq 1 $$
 <br><br>
 
 오류를 어느정도 허용하면서 과대적합하지 않는 소프트 마진을 구현하려면,
 <br>
-$$  {minimize \atop w,b,\zeta} \frac{1}{2} w^t \cdot w + C \sum_{i=1}^{m} \zeta^{(i)} $$
+$$  {\operatorname{minimize} \atop w,b,\zeta} \frac{1}{2} w^T \cdot w + C \sum_{i=1}^{m} \zeta^{(i)} $$
 <br>
 $$ \text{[조건]} i=1,2, \cdots, m \text{일 때} \quad t^{(i)}(w^T \cdot x^{(i)} + b) \geq 1-\zeta^{(i)} 그리고 \zeta^{(i)} \geq 0  $$
 <br><br>
@@ -696,28 +698,28 @@ $$ \text{[조건]} i=1,2, \cdots, m \text{일 때} \quad t^{(i)}(w^T \cdot x^{(i
 <br><br>
 
 일반적 문제공식은
-$$ {minimize \atop p} \frac{1}{2} p^T \cdot H \cdot p + f^T \cdot p$$
+$$ {\operatorname{minimize} \atop p} \frac{1}{2} p^T \cdot H \cdot p + f^T \cdot p$$
 <br>
 $$ \text{[조건]} A \cdot p \leq b $$
 <br>
 $$ \text{여기서}
 \begin{cases}
-p는 n_p\text{차원의 벡터}(n_p = \text{모델 파라미터 수}) \\
-H는 n_p \times n_p \text{크기 행렬} \\
-f는 n_p\text{차원의 벡터}  \\
-A는 n_c \times n_p \text{크기 행렬(n_c)제약 수}  \\
-bㄴ는 n_c \text{차원의 벡터} \\
+p\text{는 } n_p\text{차원의 벡터}(n_p = \text{모델 파라미터 수}) \\
+H\text{는 } n_p \times n_p \text{크기 행렬} \\
+f\text{는 } n_p\text{차원의 벡터}  \\
+A\text{는 } n_c \times n_p \text{크기 행렬(}n_c\text{)제약 수}  \\
+b\text{는 } n_c \text{차원의 벡터} \\
 \end{cases}
 $$
 <br><br>
 
 다음과 같이 QP 파라미터를 지정하면 하드 마진을 갖는 선형 SVM분류기의 목적함수를 간단하게 검증할 수 있습니다.
-- $ n_p = n +1 $, 여기서 $n$은 특성 수.(+1은 편향 때문)
+- $ n_p = n +1 $, 여기서 $n$은 특성 수.($+1$은 편향 때문)
 - $ n_c = m $, 여기서 $m$은 훈련 샘플 수
-- $H$ : $n_p \times n_p $크기이고 왼쪽 맨 위의 원소가 0(편향 제외를 위해)인 것을 제외하고 단위행렬
-- $f=0$ : 모두 0으로 채워진 $n_p$차원의 벡터
-- $b=1$ : 모두 1로 채워진 $n_c$차원의 벡터
-- $a^{(i)}=-t^{(i)} \dot x^{(i)} $, 여기서 $\dot x^{(i)}는 편향을 위해 특성 \dot x_0 = 1을 추가한 x^{(i)}$와 같음
+- $H$ : $n_p \times n_p $크기이고 왼쪽 맨 위의 원소가 $0$(편향 제외를 위해)인 것을 제외하고 단위행렬
+- $f=0$ : 모두 $0$으로 채워진 $n_p$차원의 벡터
+- $b=1$ : 모두 $1$로 채워진 $n_c$차원의 벡터
+- $a^{(i)}=-t^{(i)} \dot x^{(i)} $, 여기서 $\dot x^{(i)}$는 편향을 위해 특성 $\dot x_0 = 1$을 추가한 $x^{(i)}$와 같음
 <br><br>
 
 하드 마진 선형SVM 분류기를 훈련시키는 한 방법은 준비된 QP알고리즘에 관련 파라미터를 전달하기만 하면 됩니다. 하지만 커널 트릭을 사용하려면 제약이 있는 최적화 문제를 다른 형태로 바꿔야 합니다.
