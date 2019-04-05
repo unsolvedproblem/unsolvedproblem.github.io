@@ -11,67 +11,74 @@ comments: true
 코딩 테스트 준비  
 
 문제   
-[보물상자 비밀번호](https://www.acmicpc.net/problem/16236)
+[아기상어](https://www.acmicpc.net/problem/16236)
 
 ~~~
-N = int(input())
-map_=[]
-for i in range(N):
+n = int(input())
+board=[]
+for i in range(n):
     tmp = list(map(int, input().split()))
-    map_.append(tmp)
+    board.append(tmp)
 
+class shark:
+    def __init__(self):
+        self.body = 2
+        self.eat = 0
+        self.time = 0
+    def init(self):
+        global board
+        for i in range(n):
+            for j in range(n):
+                if board[i][j] == 9:
+                    tmp = (i, j, 0)
+                    board[i][j] = 0
+                    return tmp
+shark = shark()
+state = shark.init()
+move = (-1, 0), (0, -1), (0, 1), (1, 0)
 
-## 아기상어 위치 찾기
 q = []
-d = 0
-def init():
-    global d, map_
-    for i in range(N):
-        for j in range(N):
-            if map_[i][j] == 9:
-                q.append((0, i, j)) ## 이동거리, 좌표
-                map_[i][j] = 0
-                return
-init()    
-
-### move
-body = 2
-eat = 0
-time = 0
-check = [[False] * N for _ in range(N)]
+q.append(state)
+check = [[False] * n for _ in range(n)]
+# num = 0 #########debug
 while q:
-    ##이동
-    d, x, y = q.pop(0)
+    #print(q, 'top')
+    x, y, d = q.pop(0)
     check[x][y] = True
-    for dx, dy in (-1, 0), (0, -1), (1, 0), (0, 1):
-        nd, nx, ny = d + 1, x + dx, y + dy
-        if nx < 0 or nx >= N or ny < 0 or ny >= N:
-            continue
-        if map_[nx][ny] > body or check[nx][ny] == True:
-            continue
-    ## 큐 확장
-        check[nx][ny] = True
-        q.append((nd, nx, ny))
-    if q!= [] and d == q[0][0]:
-        continue
-    ### 먹을게 있을 때!!!
-    tmp1 = sorted(q, key=lambda x: (x[1], x[2]), reverse=False)
-    for i in tmp1:
-        d, nx, ny = i
-        if 0 < map_[nx][ny] < body:
-            eat += 1
-            map_[nx][ny] = 9
-            if eat == body:
-                body += 1
-                eat = 0
-            time += d
-            d = 0
-            q = []
-            check = [[False] * N for _ in range(N)]
-            init()
-            break
 
-print(time)
+    for i, j in move:
+        if not 0 <= x+i < n: continue
+        if not 0 <= y+j < n: continue
+        if shark.body < board[x+i][y+j]: continue
+        if check[x+i][y+j] == True: continue
+        if (x + i, y + j, d + 1) not in q:
+            q.append((x + i, y + j, d + 1))
+
+    #print(q, 'middle')
+    if q==[]:
+        break
+    elif q[0][2] == d:
+        continue
+
+    #let's eat
+    #print(q, 'bottom')
+    q_sort = sorted(q, key=lambda x:  (x[0], x[1]), reverse=False)
+    for i, j, spended_time in q_sort:
+        if 0 < board[i][j] < shark.body:
+            print('q_sort', q_sort)
+            shark.eat += 1
+            shark.time += spended_time
+            if shark.eat == shark.body:
+                shark.body += 1
+                shark.eat = 0
+            board[i][j] = 9
+            q=[]
+            q.append(shark.init())
+            check = [[False] * n for _ in range(n)]
+            break
+    #num += 1
+    #if num > 10: break
+print(shark.time)
 ~~~
 ~~~
 x = [[1,2,3],[2,3,1],[3,2,1]]
