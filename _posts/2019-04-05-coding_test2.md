@@ -72,10 +72,18 @@ while q:
             break
 
 print(time)
-
 ~~~
+~~~
+x = [[1,2,3],[2,3,1],[3,2,1]]
+sorted(x)
+sorted(x, key=lambda order: order[0])
+sorted(x, key=lambda order: order[1])
+sorted(x, key=lambda order: order[2])
 
-
+sorted(x, key=lambda order: (order[0],order[1]))
+sorted(x, key=lambda order: (order[0],order[1]), reverse=True)
+sorted(x, key=lambda order: (order[0],order[1]), reverse=False)
+~~~
 
 
 
