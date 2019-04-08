@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "삼성 coding test preparing2 python3 파이썬3"
-date:   2019-04-06
+title:  "나무 재테크 삼성 coding test preparing2 python3 파이썬3"
+date:   2019-04-05
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호

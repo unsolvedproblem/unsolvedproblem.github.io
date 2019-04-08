@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "삼성 coding test preparing1 python3 파이썬3"
+title:  "보물상자 비밀번호 삼성 coding test preparing1 python3 파이썬3"
 date:   2019-04-04
 category: code_practice
 tags: coding_practice

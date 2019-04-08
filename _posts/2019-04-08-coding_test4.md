@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "삼성 coding test preparing4 python3 파이썬3"
+title:  "인구 이동 삼성 coding test preparing4 python3 파이썬3"
 date:   2019-04-08
 category: code_practice
 tags: coding_practice
