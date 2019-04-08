@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "삼성 coding test preparing2"
-date:   2019-04-05
+title:  "삼성 coding test preparing3 python3 파이썬3"
+date:   2019-04-06
 category: code_practice
 tags: coding_practice
 author: Khel Kim, 김현호
