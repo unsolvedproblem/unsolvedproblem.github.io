@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "드래곤 커브 삼성 coding test preparing5 python3 파이썬3"
+title:  "드래곤 커브 삼성 coding test preparing6 python3 파이썬3"
 date:   2019-04-10
 category: code_practice
 tags: coding_practice
