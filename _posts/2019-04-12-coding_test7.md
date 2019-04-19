@@ -10,6 +10,14 @@ comments: true
 
 코딩 테스트 준비  
 
+1. bfs, dfs: queue와 stack에 들어가기위한 조건 잘 확인하기   
+2. '+'는 append 보다 느림
+3. if-else문보다 continue를 걸어주는게 빠름
+4. deque + while + pop이 for문보다 빠름
+
+
+
+
 ## BFS
 아기상어
 ~~~
