@@ -2,7 +2,7 @@
 layout: post
 title:  "[Hands-On ML] Chapter 1. The Machine Learning Landscape"
 date:   2019-02-07
-category: hands-on ML
+category: hands-on-ML
 tags: hands-on ML
 author: Khel Kim, 김현호
 comments: true

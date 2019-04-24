@@ -31,6 +31,16 @@ title: Posts
                                     <a href="#laon" class="btn btn-primary btn-color1">Laon people</a>
                               </div>
                             </li>
+                            <li>
+                              <div class="about_btns m-top-40">
+                                    <a href="#nlp" class="btn btn-primary btn-color4">NLP</a>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="about_btns m-top-40">
+                                    <a href="#computer-vision" class="btn btn-primary btn-color5">Computer Vision</a>
+                              </div>
+                            </li>
                           </ul>
                         </div>
                     </div>
@@ -43,9 +53,9 @@ title: Posts
                 <section id="hands-on ML" class="lightbg">
                   <div class="main_blog text-center roomy-60">
                     <div class="head_title text-center">
-                      <h3>HANDS ON</h3>
+                      <h3>HANDS ON ML</h3>
                       <div class="separator_auto separator_color3"></div>
-                        {% for post in site.tags.hands-on %}
+                        {% for post in site.categories.hands-on-ML %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">
@@ -71,7 +81,7 @@ title: Posts
                     <div class="head_title text-center">
                       <h3>FIRST CONTACT</h3>
                       <div class="separator_auto separator_color2"></div>
-                        {% for post in site.tags.first-contact %}
+                        {% for post in site.categories.first-contact %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">
@@ -97,7 +107,59 @@ title: Posts
                     <div class="head_title text-center">
                       <h3>LAON PEOPLE</h3>
                       <div class="separator_auto separator_color1"></div>
-                        {% for post in site.tags.laon %}
+                        {% for post in site.categories.laon %}
+                            <div class="blog_item m-top-20">
+                              <!--image
+                                <div class="blog_item_img">
+                                    <img src="assets/images/Blog/1.jpg" alt="" />
+                                </div>
+                              -->
+                                <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">
+                                      <h5><U>{{ post.title }}</U></h5>
+                                        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                                    </a>
+                                    <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                  </div>
+                </section>
+
+                <section id="nlp">
+                  <div class="main_blog text-center roomy-60">
+                    <div class="head_title text-center">
+                      <h3>NLP</h3>
+                      <div class="separator_auto separator_color4"></div>
+                        {% for post in site.categories.nlp %}
+                            <div class="blog_item m-top-20">
+                              <!--image
+                                <div class="blog_item_img">
+                                    <img src="assets/images/Blog/1.jpg" alt="" />
+                                </div>
+                              -->
+                                <div class="blog_text roomy-40 col-sm-6 col-sm-offset-3">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">
+                                      <h5><U>{{ post.title }}</U></h5>
+                                        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                                    </a>
+                                    <em> {{ post.date | date_to_string }} / {{ post.author }} </em>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                  </div>
+                </section>
+
+                <section id="computer-vision" class="lightbg">
+                  <div class="main_blog text-center roomy-60">
+                    <div class="head_title text-center">
+                      <h3>COMPUTER VISION</h3>
+                      <div class="separator_auto separator_color5"></div>
+                        {% for post in site.categories.computer-vision %}
                             <div class="blog_item m-top-20">
                               <!--image
                                 <div class="blog_item_img">

@@ -391,7 +391,12 @@ Separator
 .separator_color3{
     background: #ffa3eb;
 }
-
+.separator_color4{
+    background: #00CDFF;
+}
+.separator_color5{
+    background: #FFCD66;
+}
 
 /*
 Button
@@ -461,6 +466,19 @@ Button
     border:1px solid;
     border-color: #ffa3eb;
 }
+.btn-color4{
+    color: #fff;
+    background-color: #00CDFF;
+    border:1px solid;
+    border-color: #00CDFF;
+}
+.btn-color5{
+    color: #fff;
+    background-color: #FFCD66;
+    border:1px solid;
+    border-color: #FFCD66;
+}
+
 /*
 socail icon
 --------------------------------*/

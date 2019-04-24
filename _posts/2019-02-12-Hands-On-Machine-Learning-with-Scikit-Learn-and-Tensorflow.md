@@ -2,7 +2,7 @@
 layout: post
 title:  "[Hands-On ML] Chapter 2. End-to-End Machine Learning Project6"
 date:   2019-02-12
-category: hands-on ML
+category: hands-on-ML
 tags: hands-on ML
 author: Khel Kim, 김현호
 comments: true
