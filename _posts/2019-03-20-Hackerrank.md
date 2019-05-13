@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hackerrank 30 Days of Code 24 [Running Time and Complexity]"
+title:  "Hackerrank 30 Days of Code 25 [Running Time and Complexity]"
 date:   2019-03-20
 category: code_practice
 tags: coding_practice
