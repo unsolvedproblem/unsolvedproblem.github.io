@@ -1,6 +1,6 @@
 ---
 short_name: backgom2357
-name: Polar B, 백승열
+name: Diominor, 백승열
 position: Cheif Editor
 email: backgom2357@gmail.com
 github_url: "https://github.com/backgom2357"
