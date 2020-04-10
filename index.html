@@ -1,130 +1,95 @@
 ---
 layout: default
-title: Unsovled Problem
+title: Unsolved Problem
 ---
 
-{% include home_index.html %}
-
-<!--About Sections-->
-<section id="about" class="about roomy-100">
+<!-- Hero Section Begin -->
+<section class="hero-section set-bg" data-setbg="assets/images/hero-bg.jpg">
     <div class="container">
         <div class="row">
-            <div class="main_about">
-                <div class="col-md-6">
-                    <div class="about_content">
-                        <h2>ABOUT US</h2>
-                        <div class="separator_left"></div>
-
-                        <p> Team Unsolved Problem : Machine Learing Research Team and Data Science Team </p>
-
-                        <div class="about_btns m-top-40">
-                            <a href="staff" class="btn btn-primary">MEMBERS</a>
-                        </div>
-                    </div>
+            <div class="col-lg-5">
+                <div class="hs-text">
+                    <h2>UNSOLVED PROBLEM</h2>
+                    <p>In mathematics, a conjecture is a conclusion or a proposition which is suspected to be true due to preliminary supporting evidence, but for which no proof or disproof has yet been found.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="about_accordion wow fadeIn">
-                        <div id="faq_main_content" class="faq_main_content">
-                            {% for author in site.authors %}
-                            <h6><i class="fa fa-angle-right"></i> {{ author.name }} </h6>
-                            <div>
-                                <div class="content">
-                                  <h6> {{ author.position }} </h6>
-                                  <p> {{ author.content | markdownify }} </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- About Us Section Begin -->
+{% for author in site.authors %}
+<section class="about-us-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                  <span>Member</span>
+                  <h2>{{ author.name }}</h2>
+              </div>
+                    <p class="f-para"> {{ author.content | markdownify}} </p>
+                    <!-- <a href="#" class="primary-btn">Read More</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+<!-- About Us Section End -->
+
+<!-- Blog Section Begin -->
+<div class="blog-section latest-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Latest Post</span>
+                    <h2>From Our Posts</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="blog-item">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="bi-text">
+                                <ul>
+                                    <li><i class="fa fa-calendar-o"></i> {{ site.posts[0].date | date_to_string }} </li>
+                                </ul>
+                                <h4><a href="{{ site.posts[0].url | prepend: site.baseurl }}">{{ site.posts[0].title }}</a></h4>
+                                <p>{{ site.posts[0].excerpt | strip_html | truncatewords: 20}}</p>
+                                <div class="bt-author">
+                                    <div class="ba-text">
+                                        <h5>{{ site.posts[0].author }}</h5>
+                                    </div>
                                 </div>
-                            </div> <!-- End off accordion item-1 -->
-                            {% endfor %}
-                       </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div><!--End off row-->
-    </div><!--End off container -->
-</section> <!--End off About section -->
-
-<!--recent posts Section-->
-<section id="blog" class="blog lightbg">
-    <div class="container">
-        <div class="row">
-            <div class="main_blog text-center roomy-40">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div class="head_title text-center">
-                        <h2>RECENT POSTS</h2>
-                        <div class="separator_auto"></div>
-                      </div>
-                </div>
-
-                <!--recent post-->
-                <div class="col-md-4">
-                    <div class="blog_item m-top-20">
-                      <!--image
-                        <div class="blog_item_img">
-                            <img src="assets/images/Blog/1.jpg" alt="" />
+            <div class="col-md-6">
+                <div class="blog-item">
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="bi-text">
+                              <ul>
+                                  <li><i class="fa fa-calendar-o"></i> {{ site.posts[1].date | date_to_string }} </li>
+                              </ul>
+                              <h4><a href="{{ site.posts[1].url | prepend: site.baseurl }}">{{ site.posts[1].title }}</a></h4>
+                              <p>{{ site.posts[1].excerpt | strip_html | truncatewords: 20}}</p>
+                              <div class="bt-author">
+                                  <div class="ba-text">
+                                      <h5>{{ site.posts[1].author }}</h5>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                      -->
-                        <div class="blog_text roomy-40 bg-white">
-                            <h6><a href="{{ site.posts[0].url | prepend: site.baseurl }}">{{ site.posts[0].title }}</a></h6>
-                            <p>
-                              {{ site.posts[0].excerpt | strip_html | truncatewords: 50}}
-                              <em> {{ site.posts[0].date | date_to_string }} / {{ site.posts[0].author }} </em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="blog_item m-top-20">
-                      <!--image
-                        <div class="blog_item_img">
-                            <img src="assets/images/Blog/1.jpg" alt="" />
-                        </div>
-                      -->
-                        <div class="blog_text roomy-40 bg-white">
-                            <h6><a href="{{ site.posts[1].url | prepend: site.baseurl }}">{{ site.posts[1].title }}</a></h6>
-                            <p>
-                              {{ site.posts[1].excerpt | strip_html | truncatewords: 50 }}
-                              <em> {{ site.posts[1].date | date_to_string }} / {{ site.posts[1].author }} </em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="blog_item m-top-20">
-                      <!--image
-                        <div class="blog_item_img">
-                            <img src="assets/images/Blog/1.jpg" alt="" />
-                        </div>
-                      -->
-                        <div class="blog_text roomy-40 bg-white">
-                            <h6><a href="{{ site.posts[2].url | prepend: site.baseurl }}">{{ site.posts[2].title }}</a></h6>
-                            <p>
-                              {{ site.posts[2].excerpt | strip_html | truncatewords: 50 }}
-                              <em> {{ site.posts[2].date | date_to_string }} / {{ site.posts[2].author }} </em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End off recent post-->
-
-            </div>
-        </div><!--End off row -->
-    </div><!--End off container -->
-</section><!-- End off Blog section-->
-
-<!--Projects Section-->
-<section id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="main_portfolio roomy-100">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="head_title text-center">
-                        <h2>OUR PROJECTS</h2>
-                        <div class="separator_auto"></div>
-                        <p> There is no project yet </p>
                     </div>
                 </div>
             </div>
-        </div> <!--End off row-->
-    </div> <!--End off container-->
-</section> <!--End off Portfolio section-->
+        </div>
+    </div>
+</div>
+<!-- Blog Section End -->

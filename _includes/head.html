@@ -1,12 +1,14 @@
 <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Hazze Template">
+      <meta name="keywords" content="Hazze, unica, creative, html">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>{{ page.title }}</title>
 
     <!--Google analytics-->
     {% include analytics.html %}
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="data:image/png;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEA
                 AAAAAAAAAAAAXXpTAF0vLgBeSXoAIxk9AFlPJwCHVFEAEBFEAFssHgB7h1cAYkVcAJJrhAAYEUQA
@@ -34,33 +36,25 @@
                 AAAAADtNIjAcBgAAAAAAAAAAAAAAABRLAAAAAAAAAP//AADhhwAAznMAAJ25AAC9vQAAvD0AALmd
                 AAC1rQAAlCkAAM5zAADhhwAA7/cAAPfvAADzzwAA+B8AAP5/AAA=" rel="icon" type="image/png" />
 
-    <!--Google Font link-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
 
-
-    <link rel="stylesheet" href="/assets/css/slick.css">
-    <link rel="stylesheet" href="/assets/css/slick-theme.css">
-    <link rel="stylesheet" href="/assets/css/animate.css">
-    <link rel="stylesheet" href="/assets/css/fonticons.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="/assets/css/bootsnav.css">
-
-    <!--For Plugins external css-->
-    <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
-
-    <!--Theme custom css -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
-
-    <!--Theme Responsive css-->
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
-
-    <script src="/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" type="text/css">
 
     <!--Google search console-->
     <meta name="google-site-verification" content="wGiDk3KvxiJnz_NUL2PU5MFg51zdPidy8tG8ZR-8EW0" />
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$']], processEscapes: true,}});
+    </script>
+
 </head>

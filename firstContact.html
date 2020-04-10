@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="breadcrumb-option">
+                    <a href="#"> Posts </a>
+                    <span>First contact</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="breadcrumb-text">
+                    <h3>First Contact with Tensorflow</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- Blog Section Begin -->
+<div class="blog-section spad">
+    <div class="container">
+        <div class="row">
+
+          {% for post in site.categories.first-contact %}
+            <div class="col-lg-6">
+                <div class="blog-item solid-bg">
+                    <div class="bi-text">
+                        <ul>
+                            <li><i class="fa fa-calendar-o"></i> {{ post.date | date_to_string }} </li>
+                        </ul>
+                        <a href="{{ post.url | prepend: site.baseurl }}">
+                          <h4>{{ post.title }}</h4>
+                          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                        </a>
+                        <div class="bt-author">
+                            <div class="ba-text">
+                                <h5>{{ post.author }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- Blog Section End -->
