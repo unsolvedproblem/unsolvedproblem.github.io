@@ -4,7 +4,7 @@ title:  "[쉽게읽는 머신러닝-라온피플] 2. 머신러닝의 학습방�
 date:   2019-01-23 17:16:00 -0000
 category: laon
 tags: laon
-author: Polar B, 백승열
+author: Diominor, 백승열
 comments: true
 ---
 <br><br>

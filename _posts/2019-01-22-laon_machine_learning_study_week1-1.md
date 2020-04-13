@@ -4,7 +4,7 @@ title:  "[쉽게읽는 머신러닝-라온피플] 1. 머신러닝 framework"
 date:   2019-01-22
 category: laon
 tags: laon
-author: Polar B, 백승열
+author: Diominor, 백승열
 comments: true
 ---
 <br><br>

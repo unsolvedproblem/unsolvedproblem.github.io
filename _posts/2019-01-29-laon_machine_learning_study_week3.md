@@ -4,7 +4,7 @@ title:  "[쉽게읽는 머신러닝-라온피플] 6. Autoencoder"
 date:   2019-01-29
 category: laon
 tags: laon
-author: Polar B, 백승열
+author: Diominor, 백승열
 comments: true
 ---
 _Author : Duck Hyeun, Ryu_

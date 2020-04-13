@@ -4,7 +4,7 @@ title:  "[쉽게읽는 머신러닝-라온피플] 3. Decision Tree"
 date:   2019-01-27
 category: laon
 tags: laon
-author: Polar B, 백승열
+author: Diominor, 백승열
 comments: true
 ---
 <br><br>
