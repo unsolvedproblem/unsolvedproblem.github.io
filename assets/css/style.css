@@ -110,7 +110,9 @@ ol {
 }
 
 li {
-	color : #90c7ff;
+	color : #fff;
+	padding: 5px;
+  margin-left: 20px;
 }
 
 pre code {
