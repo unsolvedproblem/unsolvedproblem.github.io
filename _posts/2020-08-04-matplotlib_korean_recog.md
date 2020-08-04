@@ -110,7 +110,9 @@ comments: true
 5. 사용하기
 
     matplotlib에 원하는 폰트를 설정하는 코드는 여러 가지가 있지만 그 중 하나를 소개합니다.
+
     ```
     import matplotlib.pyplot as plt
     from matplotlib import rc
     rc('font', family="[폰트 이름]")
+    ```
