@@ -52,7 +52,7 @@ comments: true
     
     - fontlist-v310.json
 
-       "ttflist": \[...\] 폰트 정보를 양식에 따라 리스트에 추가합니다.
+       "ttflist": \[...\] : **"ttflist"**리스트에 폰트 정보를 양식에 따라 추가합니다.
     
 
     ```
@@ -65,7 +65,7 @@ comments: true
         "afm": "Helvetica"
       },
       "ttflist": [
-      
+    
     { 
       "fname": "fonts/ttf/[폰트 이름].ttf",
       "name": "[폰트 이름]",
